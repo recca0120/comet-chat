@@ -1,0 +1,76 @@
+
+-
+    request:
+        method: GET
+        url: 'https://244134adc586447f.api-us.cometchat.io/v3/users/uuid_999'
+        headers:
+            Host: 244134adc586447f.api-us.cometchat.io
+            Expect: ''
+            Accept-Encoding: ''
+            User-Agent: GuzzleHttp/7
+            accept: application/json
+            apikey: 4c3e5b5a96da90cc4bb3f3013d22e72aaea802c9
+            content-type: application/json
+        body: '[]'
+    response:
+        status:
+            code: 200
+            message: OK
+        headers:
+            Date: 'Tue, 05 Sep 2023 05:04:55 GMT'
+            Content-Type: application/json
+            Content-Length: '150'
+            Connection: close
+            Server: 'Apache/2.4.54 () OpenSSL/1.0.2k-fips'
+            cache-control: 'must-revalidate, no-cache, private'
+            Vary: Accept-Encoding
+            Content-Encoding: none
+            X-RateLimit-Limit: '20000'
+            X-RateLimit-Remaining: '19997'
+            X-RateLimit-Limit-For-App: '100000'
+            X-RateLimit-Remaining-For-App: '99998'
+            Access-Control-Allow-Origin: '*'
+            Access-Control-Allow-Methods: 'OPTIONS,HEAD,GET,POST,PUT,PATCH,DELETE'
+            Access-Control-Allow-Headers: 'Content-Type,Accept,Cache-Control,Authorization,X-Requested-With,appId,apiKey,authToken,onBehalfOf,resource,Accept-Encoding,group,region,sdk,guid,uid,clientEnvironment,extensionId,username,password,callToken'
+            Accept: application/json
+            Upgrade: 'h2,h2c'
+        body: '{"data":{"uid":"uuid_999","name":"test","link":"https:\/\/foo.bar","status":"offline","role":"default","createdAt":1693890190,"updatedAt":1693890247}}'
+        curl_info:
+            url: 'https://244134adc586447f.api-us.cometchat.io/v3/users/uuid_999'
+            content_type: application/json
+            http_code: 200
+            header_size: 785
+            request_size: 234
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 1.108922
+            namelookup_time: 0.002539
+            connect_time: 0.314856
+            pretransfer_time: 0.835363
+            size_upload: 2.0
+            size_download: 150.0
+            speed_download: 135.0
+            speed_upload: 1.0
+            download_content_length: 150.0
+            upload_content_length: 2.0
+            starttransfer_time: 1.108883
+            redirect_time: 0.0
+            redirect_url: ''
+            primary_ip: 18.223.197.243
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 192.168.15.243
+            local_port: 50781
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 834598
+            connect_time_us: 314856
+            namelookup_time_us: 2539
+            pretransfer_time_us: 835363
+            redirect_time_us: 0
+            starttransfer_time_us: 1108883
+            total_time_us: 1108922
+    index: 0

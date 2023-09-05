@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         backupGlobals="false"
+         beStrictAboutTestsThatDoNotTestAnything="false"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         processIsolation="false"
+         stopOnError="false"
+         stopOnFailure="false"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.3/phpunit.xsd"
+         cacheDirectory=".phpunit.cache"
+         backupStaticProperties="false">
+    <coverage/>
+    <testsuites>
+        <testsuite name="Package Test Suite">
+            <directory suffix="Test.php">./tests</directory>
+        </testsuite>
+    </testsuites>
+    <source>
+        <include>
+            <directory suffix=".php">./src</directory>
+        </include>
+    </source>
+    <php>
+        <env name="COMET_CHAT_APP_ID" value="244134adc586447f"/>
+        <env name="COMET_CHAT_REGION" value="us"/>
+        <env name="COMET_CHAT_API_KEY" value="4c3e5b5a96da90cc4bb3f3013d22e72aaea802c9"/>
+    </php>
+</phpunit>

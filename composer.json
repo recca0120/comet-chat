@@ -1,0 +1,53 @@
+{
+    "name": "recca0120/comet-chat",
+    "description": "",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "recca0120",
+            "email": "recca0120@gmail.com"
+        }
+    ],
+    "type": "library",
+    "require": {
+        "nyholm/psr7": "^1.8",
+        "php-http/client-implementation": "1.0",
+        "php-http/discovery": "^1.19",
+        "php-http/httplug": "^2.4",
+        "symfony/http-client": "^6.3",
+        "vlucas/phpdotenv": "^5.5"
+    },
+    "require-dev": {
+        "guzzlehttp/guzzle": "^7.8",
+        "illuminate/support": "^10.21",
+        "php-vcr/php-vcr": "^1.6",
+        "phpunit/phpunit": "^10.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Recca0120\\CometChat\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Recca0120\\CometChat\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Recca0120\\CometChat\\CometChatServiceProvider"
+            ]
+        }
+    }
+}
