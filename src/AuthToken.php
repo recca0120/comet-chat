@@ -59,37 +59,10 @@ class AuthToken extends Base
      */
     public function all(string $uid): Generator
     {
-        $page = 1;
-
-        while (true) {
-            $result = $this->sendRequest(
-                'GET',
-                sprintf("users/%s/auth_tokens?%s", $uid, http_build_query(['page' => $page])),
-                raw: true
-            );
-
-            foreach ($result['data'] as $row) {
-                yield $row;
-            }
-
-            $pagination = $result['meta']['pagination'];
-            $currentPage = $pagination['current_page'];
-            $total_pages = $pagination['total_pages'];
-
-            if ($currentPage >= $total_pages) {
-                break;
-            }
-
-            $page++;
-        }
-    }
-
-    /**
-     * @throws ClientExceptionInterface
-     * @throws JsonException
-     */
-    public function list(string $uid): Generator
-    {
-        return $this->all($uid);
+        return $this->paginate(
+            'GET',
+            'users/'.$uid.'/auth_tokens',
+            ['page' => 1]
+        );
     }
 }

@@ -24,37 +24,16 @@ class Conversation extends Base
         int $page = 1,
         ?string $onBehalfOf = null
     ): Generator {
-        while (true) {
-            $result = $this->sendRequest(
-                'GET',
-                'conversations?'.http_build_query([
-                    'conversationType' => $conversationType,
-                    'withTags' => $withTags,
-                    'tags' => $tags,
-                    'withUserAndGroupTags' => $withUserAndGroupTags,
-                    'userTags' => $userTags,
-                    'groupTags' => $groupTags,
-                    'unread' => $unread,
-                    'perPage' => $perPage,
-                    'page' => $page,
-                ]),
-                ['onBehalfOf' => $onBehalfOf],
-                raw: true
-            );
-
-            foreach ($result['data'] as $data) {
-                yield $data;
-            }
-
-            $pagination = $result['meta']['pagination'];
-            $currentPage = $pagination['current_page'];
-            $total_pages = $pagination['total_pages'];
-
-            if ($currentPage >= $total_pages) {
-                break;
-            }
-
-            $page++;
-        }
+        return $this->paginate('GET', 'conversations', [
+            'conversationType' => $conversationType,
+            'withTags' => $withTags,
+            'tags' => $tags,
+            'withUserAndGroupTags' => $withUserAndGroupTags,
+            'userTags' => $userTags,
+            'groupTags' => $groupTags,
+            'unread' => $unread,
+            'perPage' => $perPage,
+            'page' => $page,
+        ], ['onBehalfOf' => $onBehalfOf]);
     }
 }
