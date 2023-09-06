@@ -64,8 +64,7 @@ class Message extends Base
         ?int $toTimestamp = null,
         ?string $onBehalfOf = null
     ): Generator {
-        $path = 'messages';
-        $query = [
+        return $this->paginate('GET', 'messages', [
             'searchKey' => $searchKey,
             'receiverType' => $receiverType,
             'affix' => $affix,
@@ -85,30 +84,7 @@ class Message extends Base
             'types' => $types,
             'fromTimestamp' => $fromTimestamp,
             'toTimestamp' => $toTimestamp,
-        ];
-        $headers = ['onBehalfOf' => $onBehalfOf];
-
-        while (true) {
-            $result = $this->sendRequest(
-                'GET',
-                $path.'?'.http_build_query($query),
-                $headers,
-                raw: true
-            );
-
-            foreach ($result['data'] as $row) {
-                yield $row;
-            }
-
-            if ($result['meta']['current']['count'] === 0) {
-                break;
-            }
-
-            $next = $result['meta']['next'];
-            $query['id'] = $next['id'];
-            $query['sentAt'] = $next['sentAt'];
-            $query['affix'] = $next['affix'];
-        }
+        ], ['onBehalfOf' => $onBehalfOf]);
     }
 
     /**

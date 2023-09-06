@@ -40,22 +40,24 @@ abstract class Base
         array $data = []
     ): Generator {
         while (true) {
-            $url = $path.'?'.http_build_query($query);
-            $result = $this->client->sendRequest($method, $url, $headers, $data);
+            $paginator = new Paginator($this->client->sendRequest(
+                $method,
+                $path.'?'.http_build_query($query),
+                $headers,
+                $data
+            ));
 
-            foreach ($result['data'] as $row) {
-                yield $row;
+            foreach ($paginator as $item) {
+                yield $item;
             }
 
-            $pagination = $result['meta']['pagination'];
-            $currentPage = $pagination['current_page'];
-            $total_pages = $pagination['total_pages'];
-
-            if ($currentPage >= $total_pages) {
+            if (! $paginator->hasMorePage()) {
                 break;
             }
 
-            $query['page']++;
+            foreach ($paginator->nextQuery() as $key => $value) {
+                $query[$key] = $value;
+            }
         }
     }
 }
