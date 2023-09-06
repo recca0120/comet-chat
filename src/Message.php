@@ -64,31 +64,35 @@ class Message extends Base
         ?int $toTimestamp = null,
         ?string $onBehalfOf = null
     ): Generator {
+        $path = 'messages';
+        $query = [
+            'searchKey' => $searchKey,
+            'receiverType' => $receiverType,
+            'affix' => $affix,
+            'id' => $id,
+            'category' => $category,
+            'type' => $type,
+            'hideDeleted' => $hideDeleted,
+            'onlyDeleted' => $onlyDeleted,
+            'hideReplies' => $hideReplies,
+            'count' => $count,
+            'sentAt' => $sentAt,
+            'limit' => $limit,
+            'conversationId' => $conversationId,
+            'withTags' => $withTags,
+            'tags' => $tags,
+            'categories' => $categories,
+            'types' => $types,
+            'fromTimestamp' => $fromTimestamp,
+            'toTimestamp' => $toTimestamp,
+        ];
+        $headers = ['onBehalfOf' => $onBehalfOf];
+
         while (true) {
             $result = $this->sendRequest(
                 'GET',
-                'messages?'.http_build_query([
-                    'searchKey' => $searchKey,
-                    'receiverType' => $receiverType,
-                    'affix' => $affix,
-                    'id' => $id,
-                    'category' => $category,
-                    'type' => $type,
-                    'hideDeleted' => $hideDeleted,
-                    'onlyDeleted' => $onlyDeleted,
-                    'hideReplies' => $hideReplies,
-                    'count' => $count,
-                    'sentAt' => $sentAt,
-                    'limit' => $limit,
-                    'conversationId' => $conversationId,
-                    'withTags' => $withTags,
-                    'tags' => $tags,
-                    'categories' => $categories,
-                    'types' => $types,
-                    'fromTimestamp' => $fromTimestamp,
-                    'toTimestamp' => $toTimestamp,
-                ]),
-                ['onBehalfOf' => $onBehalfOf],
+                $path.'?'.http_build_query($query),
+                $headers,
                 raw: true
             );
 
@@ -101,9 +105,9 @@ class Message extends Base
             }
 
             $next = $result['meta']['next'];
-            $id = $next['id'];
-            $sentAt = $next['sentAt'];
-            $affix = $next['affix'];
+            $query['id'] = $next['id'];
+            $query['sentAt'] = $next['sentAt'];
+            $query['affix'] = $next['affix'];
         }
     }
 
