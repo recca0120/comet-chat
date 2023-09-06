@@ -2,6 +2,7 @@
 
 namespace Recca0120\CometChat;
 
+use Generator;
 use JsonException;
 use Psr\Http\Client\ClientExceptionInterface;
 
@@ -133,40 +134,20 @@ class User extends Base
         ?array $roles = null,
         ?bool $onlyDeactivated = null,
         ?bool $withDeactivated = null,
-    ) {
-        while (true) {
-            $result = $this->sendRequest(
-                'GET',
-                'users?'.http_build_query([
-                    'searchKey' => $searchKey,
-                    'searchIn' => $searchIn,
-                    'status' => $status,
-                    'count' => $count,
-                    'perPage' => $perPage,
-                    'page' => $page,
-                    'role' => $role,
-                    'withTags' => $withTags,
-                    'tags' => $tags,
-                    'roles' => $roles,
-                    'onlyDeactivated' => $onlyDeactivated,
-                    'withDeactivated' => $withDeactivated,
-                ]),
-                raw: true
-            );
-
-            foreach ($result['data'] as $data) {
-                yield $data;
-            }
-
-            $pagination = $result['meta']['pagination'];
-            $currentPage = $pagination['current_page'];
-            $total_pages = $pagination['total_pages'];
-
-            if ($currentPage >= $total_pages) {
-                break;
-            }
-
-            $page++;
-        }
+    ): Generator {
+        return $this->paginate('GET', 'users', [
+            'searchKey' => $searchKey,
+            'searchIn' => $searchIn,
+            'status' => $status,
+            'count' => $count,
+            'perPage' => $perPage,
+            'page' => $page,
+            'role' => $role,
+            'withTags' => $withTags,
+            'tags' => $tags,
+            'roles' => $roles,
+            'onlyDeactivated' => $onlyDeactivated,
+            'withDeactivated' => $withDeactivated,
+        ]);
     }
 }
