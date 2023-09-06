@@ -4,7 +4,6 @@ namespace Recca0120\CometChat;
 
 use Countable;
 use Iterator;
-use ReturnTypeWillChange;
 
 class Paginator implements Iterator, Countable
 {
@@ -17,26 +16,22 @@ class Paginator implements Iterator, Countable
         $this->meta = $result['meta'];
     }
 
-    public function hasMorePage(): bool
+    public function hasMorePages(): bool
     {
-        if (! isset($this->meta['pagination'])) {
-            return (int) $this->meta['current']['count'] !== 0;
+        if ($this->hasPagination()) {
+            return $this->meta['pagination']['current_page'] < $this->meta['pagination']['total_pages'];
         }
 
-        return $this->meta['pagination']['current_page'] < $this->meta['pagination']['total_pages'];
+        return (int) $this->meta['current']['count'] !== 0;
     }
 
     public function nextQuery(): array
     {
-        if (! isset($this->meta['pagination'])) {
-            return [
-                'id' => $this->meta['next']['id'],
-                'sentAt' => $this->meta['next']['sentAt'],
-                'affix' => $this->meta['next']['affix'],
-            ];
+        if ($this->hasPagination()) {
+            return ['page' => ++$this->meta['pagination']['current_page']];
         }
 
-        return ['page' => $this->meta['pagination']['current_page'] + 1];
+        return $this->meta['next'];
     }
 
     public function count(): int
@@ -49,10 +44,9 @@ class Paginator implements Iterator, Countable
         return current($this->items);
     }
 
-    #[ReturnTypeWillChange]
-    public function next(): mixed
+    public function next(): void
     {
-        return next($this->items);
+        next($this->items);
     }
 
     public function key(): string|int|null
@@ -68,5 +62,10 @@ class Paginator implements Iterator, Countable
     public function rewind(): void
     {
         reset($this->items);
+    }
+
+    private function hasPagination(): bool
+    {
+        return array_key_exists('pagination', $this->meta);
     }
 }

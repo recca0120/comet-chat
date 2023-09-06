@@ -51,7 +51,7 @@ abstract class Base
                 yield $item;
             }
 
-            if (! $paginator->hasMorePage()) {
+            if (! $paginator->hasMorePages()) {
                 break;
             }
 
