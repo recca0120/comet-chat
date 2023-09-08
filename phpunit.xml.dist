@@ -22,8 +22,8 @@
         </include>
     </source>
     <php>
-        <env name="COMET_CHAT_APP_ID" value="244134adc586447f"/>
-        <env name="COMET_CHAT_REGION" value="us"/>
-        <env name="COMET_CHAT_API_KEY" value="4c3e5b5a96da90cc4bb3f3013d22e72aaea802c9"/>
+        <env name="VITE_COMET_CHAT_APP_ID" value="244134adc586447f"/>
+        <env name="VITE_COMET_CHAT_REGION" value="us"/>
+        <env name="VITE_COMET_CHAT_API_KEY" value="4c3e5b5a96da90cc4bb3f3013d22e72aaea802c9"/>
     </php>
 </phpunit>
