@@ -22,7 +22,7 @@ abstract class TestCase extends BaseTestCase
             ->enableLibraryHooks(['curl', 'stream_wrapper']);
         VCR::turnOn();
 
-        $config = require __DIR__.'/../config/comet-chat.php';
+        $config = require __DIR__.'/../config/cometchat.php';
 
         $this->client = new Client($config['app_id'], $config['api_key'], $config['region'], new GuzzleClient());
     }

@@ -9,10 +9,10 @@ class CometChatServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/comet-chat.php', 'comet-chat');
+        $this->mergeConfigFrom(__DIR__.'/../config/cometchat.php', 'cometchat');
 
         $this->app->singleton(Client::class, function () {
-            $config = config('comet-chat');
+            $config = config('cometchat');
 
             return new Client($config['app_id'], $config['api_key'], $config['region'], new GuzzleClient());
         });
@@ -27,8 +27,8 @@ class CometChatServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/comet-chat.php' => config_path('comet-chat.php'),
-            ], 'comet-chat');
+                __DIR__.'/../config/cometchat.php' => config_path('cometchat.php'),
+            ], 'cometchat');
         }
     }
 }
