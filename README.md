@@ -1,1 +1,1 @@
-# CometChat
+# CometChat's REST API
