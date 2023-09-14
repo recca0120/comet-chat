@@ -11,6 +11,7 @@ use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Recca0120\CometChat\Api\AuthToken;
+use Recca0120\CometChat\Api\BlockUser;
 use Recca0120\CometChat\Api\Conversation;
 use Recca0120\CometChat\Api\Message;
 use Recca0120\CometChat\Api\User;
@@ -42,6 +43,11 @@ class Client
     public function authToken(): AuthToken
     {
         return new AuthToken($this);
+    }
+
+    public function blockUser(): BlockUser
+    {
+        return new BlockUser($this);
     }
 
     public function message(): Message

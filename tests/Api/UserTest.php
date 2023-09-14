@@ -31,17 +31,18 @@ class UserTest extends TestCase
         $avatar = 'https://via.placeholder.com/640x480.png/001122?text=accusamus';
         $link = 'https://ankunding.com/commodi-debitis-sed-laboriosam-aliquid-voluptatum-enim-doloremque';
 
-        $user = $this->user->create(uid: 'uuid_999', name: 'test', avatar: $avatar, link: $link, withAuthToken: true);
+//        $this->clearUsers();
+        $user = $this->user->create(uid: 'user_000', name: 'test', avatar: $avatar, link: $link, withAuthToken: true);
 
         self::assertEquals([
-            'uid' => 'uuid_999',
+            'uid' => 'user_000',
             'name' => 'test',
             'link' => $link,
             'avatar' => $avatar,
             'status' => 'offline',
             'role' => 'default',
-            'createdAt' => 1693890190,
-            'authToken' => 'uuid_999_169389019006af5f20091733fd94305f2c626ba2',
+            'createdAt' => 1694667681,
+            'authToken' => 'user_000_169466768147ce45a79418c20c57234ba9694e2f',
         ], $user);
     }
 
@@ -59,7 +60,7 @@ class UserTest extends TestCase
         $avatar = 'https://via.placeholder.com/640x480.png/001122?text=accusamus';
         $link = 'https://ankunding.com/commodi-debitis-sed-laboriosam-aliquid-voluptatum-enim-doloremque';
 
-        $this->user->create(uid: 'uuid_999', name: 'test', avatar: $avatar, link: $link, withAuthToken: true);
+        $this->user->create(uid: 'user_000', name: 'test', avatar: $avatar, link: $link, withAuthToken: true);
     }
 
     /**
@@ -72,16 +73,16 @@ class UserTest extends TestCase
 
         $link = 'https://foo.bar';
 
-        $user = $this->user->update(uid: 'uuid_999', name: 'test', link: $link, unset: ['avatar']);
+        $user = $this->user->update(uid: 'user_000', name: 'test', link: $link, unset: ['avatar']);
 
         self::assertEquals([
-            'uid' => 'uuid_999',
+            'uid' => 'user_000',
             'name' => 'test',
             'link' => $link,
             'status' => 'offline',
             'role' => 'default',
-            'createdAt' => 1693890190,
-            'updatedAt' => 1693890247,
+            'createdAt' => 1694667681,
+            'updatedAt' => 1694667756,
         ], $user);
     }
 
@@ -94,14 +95,14 @@ class UserTest extends TestCase
         VCR::insertCassette('get_user.yaml');
 
         self::assertEquals([
-            'uid' => 'uuid_999',
+            'uid' => 'user_000',
             'name' => 'test',
             'link' => 'https://foo.bar',
             'status' => 'offline',
             'role' => 'default',
-            'createdAt' => 1693890190,
-            'updatedAt' => 1693890247,
-        ], $this->user->get(uid: 'uuid_999'));
+            'createdAt' => 1694667681,
+            'updatedAt' => 1694667756,
+        ], $this->user->get(uid: 'user_000'));
     }
 
     /**
@@ -114,8 +115,8 @@ class UserTest extends TestCase
 
         self::assertEquals([
             'success' => true,
-            'message' => 'User with UID uuid_999 has been deleted successfully.',
-        ], $this->user->delete(uid: 'uuid_999', permanent: true));
+            'message' => 'User with UID user_000 has been deleted successfully.',
+        ], $this->user->delete(uid: 'user_000', permanent: true));
     }
 
     /**
@@ -129,7 +130,7 @@ class UserTest extends TestCase
 
         VCR::insertCassette('delete_user_fail.yaml');
 
-        $this->user->delete(uid: 'uuid_999', permanent: true);
+        $this->user->delete(uid: 'user_000', permanent: true);
     }
 
     /**
@@ -140,8 +141,19 @@ class UserTest extends TestCase
     {
         VCR::insertCassette('list_users.yaml');
 
-        $generator = $this->user->all(perPage: 5);
+//        $this->givenUsers(25);
 
-        self::assertCount(25, iterator_to_array($generator));
+        $pages = iterator_to_array($this->user->all(perPage: 5));
+        $records = array_reduce($pages, static fn($acc, $paginator) => [...$acc, ...$paginator->items()], []);
+
+        self::assertCount(5, $pages);
+        self::assertCount(25, $records);
+        self::assertEquals([
+            'uid' => 'user_000',
+            'name' => 'user_000',
+            'status' => 'offline',
+            'role' => 'default',
+            'createdAt' => 1694667958,
+        ], last($records));
     }
 }

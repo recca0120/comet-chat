@@ -52,8 +52,49 @@ class MessageTest extends TestCase
 //            usleep(500);
 //        }
 
-        $generator = $this->message->all(count: true, limit: 1000);
-        self::assertCount(355, iterator_to_array($generator));
+        $pages = iterator_to_array($this->message->all(count: true, limit: 1000));
+        $records = array_reduce($pages, static fn($acc, $paginator) => [...$acc, ...$paginator->items()], []);
+
+        self::assertCount(2, $pages);
+        self::assertCount(355, $records);
+        self::assertEquals([
+            'id' => '355',
+            'conversationId' => 'app_system_user_uuid_02',
+            'sender' => 'app_system',
+            'receiverType' => 'user',
+            'receiver' => 'uuid_02',
+            'category' => 'message',
+            'type' => 'text',
+            'data' => [
+                'text' => 'message150',
+                'entities' => [
+                    'sender' => [
+                        'entity' => [
+                            'uid' => 'app_system',
+                            'name' => 'System',
+                            'role' => 'default',
+                            'status' => 'offline',
+                        ],
+                        'entityType' => 'user',
+                    ],
+                    'receiver' => [
+                        'entity' => [
+                            'uid' => 'uuid_02',
+                            'link' => 'http://major-tom-web-app.test/@username_02',
+                            'name' => 'name_02',
+                            'role' => 'default',
+                            'avatar' => 'http://major-tom-web-app.test/storage/avatar/avatar_02_960.jpg',
+                            'status' => 'offline',
+                            'createdAt' => 1693269115,
+                            'updatedAt' => 1693818100,
+                        ],
+                        'entityType' => 'user',
+                    ],
+                ],
+            ],
+            'sentAt' => 1693887765,
+            'updatedAt' => 1693887765,
+        ], last($records));
     }
 
     /**

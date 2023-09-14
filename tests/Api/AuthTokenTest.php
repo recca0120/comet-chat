@@ -27,13 +27,14 @@ class AuthTokenTest extends TestCase
     public function test_create_auth_token(): void
     {
         VCR::insertCassette('create_auth_token.yaml');
-//        $this->client->user()->create(uid: 'uuid_999', name: 'uuid_999');
+
+//        $this->givenUsers(1);
 
         self::assertEquals([
-            'uid' => 'uuid_999',
-            'authToken' => 'uuid_999_16938906989ce9b1f42c23c6434b8ef8872e5625',
-            'createdAt' => 1693890698,
-        ], $this->authToken->create(uid: 'uuid_999', force: true));
+            'uid' => 'user_000',
+            'authToken' => 'user_000_1694668129d2eca40a65abba29e6860224018ad8',
+            'createdAt' => 1694668129,
+        ], $this->authToken->create(uid: 'user_000', force: true));
     }
 
     /**
@@ -45,10 +46,10 @@ class AuthTokenTest extends TestCase
         VCR::insertCassette('update_auth_token.yaml');
 
         self::assertEquals([
-            'uid' => 'uuid_999',
-            'authToken' => 'uuid_999_16938906989ce9b1f42c23c6434b8ef8872e5625',
-            'createdAt' => 1693890698,
-        ], $this->authToken->update(uid: 'uuid_999', authToken: 'uuid_999_16938906989ce9b1f42c23c6434b8ef8872e5625'));
+            'uid' => 'user_000',
+            'authToken' => 'user_000_1694668129d2eca40a65abba29e6860224018ad8',
+            'createdAt' => 1694668129,
+        ], $this->authToken->update(uid: 'user_000', authToken: 'user_000_1694668129d2eca40a65abba29e6860224018ad8'));
     }
 
     /**
@@ -60,29 +61,10 @@ class AuthTokenTest extends TestCase
         VCR::insertCassette('get_auth_token.yaml');
 
         self::assertEquals([
-            'uid' => 'uuid_999',
-            'authToken' => 'uuid_999_16938906989ce9b1f42c23c6434b8ef8872e5625',
-            'createdAt' => 1693890698,
-        ], $this->authToken->get(uid: 'uuid_999', authToken: 'uuid_999_16938906989ce9b1f42c23c6434b8ef8872e5625'));
-    }
-
-    /**
-     * @throws ClientExceptionInterface
-     * @throws JsonException
-     */
-    public function test_list_auth_tokens(): void
-    {
-        VCR::insertCassette('list_auth_tokens.yaml');
-
-//        $this->authToken->flush(uid: 'uuid_999');
-//        for ($i = 0; $i < 200; $i++) {
-//            $this->authToken->create(uid: 'uuid_999', force: true);
-//            usleep(500);
-//        }
-
-        $generator = $this->authToken->all(uid: 'uuid_999');
-
-        self::assertCount(200, iterator_to_array($generator));
+            'uid' => 'user_000',
+            'authToken' => 'user_000_1694668129d2eca40a65abba29e6860224018ad8',
+            'createdAt' => 1694668129,
+        ], $this->authToken->get(uid: 'user_000', authToken: 'user_000_1694668129d2eca40a65abba29e6860224018ad8'));
     }
 
     /**
@@ -95,8 +77,8 @@ class AuthTokenTest extends TestCase
 
         self::assertEquals([
             'success' => true,
-            'message' => 'Cleared Auth Tokens successfully for uid uuid_999.',
-        ], $this->authToken->flush(uid: 'uuid_999'));
+            'message' => 'Cleared Auth Tokens successfully for uid user_000.',
+        ], $this->authToken->flush(uid: 'user_000'));
     }
 
     /**
@@ -110,6 +92,27 @@ class AuthTokenTest extends TestCase
 
         VCR::insertCassette('get_auth_token_not_exists.yaml');
 
-        $this->authToken->get(uid: 'uuid_999', authToken: 'uuid_999_169389049788c05534c11cef2e35b3e436c60073');
+        $this->authToken->get(uid: 'user_000', authToken: 'user_000_169389049788c05534c11cef2e35b3e436c60073');
+    }
+
+    /**
+     * @throws ClientExceptionInterface
+     * @throws JsonException
+     */
+    public function test_list_auth_tokens(): void
+    {
+        VCR::insertCassette('list_auth_tokens.yaml');
+
+//        $this->authToken->flush(uid: 'user_000');
+//        for ($i = 0; $i < 200; $i++) {
+//            $this->authToken->create(uid: 'user_000', force: true);
+//            usleep(100);
+//        }
+
+        $pages = iterator_to_array($this->authToken->all('user_000', 5));
+        $records = array_reduce($pages, static fn($acc, $paginator) => [...$acc, ...$paginator->items()], []);
+
+        self::assertCount(40, $pages);
+        self::assertCount(200, $records);
     }
 }

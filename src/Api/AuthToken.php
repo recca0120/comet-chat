@@ -57,12 +57,12 @@ class AuthToken extends Base
      * @throws ClientExceptionInterface
      * @throws JsonException
      */
-    public function all(string $uid): Generator
+    public function all(string $uid, int $perPage = 100, int $page = 1): Generator
     {
         return $this->paginate(
             'GET',
             'users/'.$uid.'/auth_tokens',
-            ['page' => 1]
+            ['perPage' => $perPage, 'page' => $page]
         );
     }
 }

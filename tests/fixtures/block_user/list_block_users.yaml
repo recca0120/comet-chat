@@ -1,0 +1,375 @@
+
+-
+    request:
+        method: GET
+        url: 'https://244134adc586447f.api-us.cometchat.io/v3/users/user_000/blockedusers?perPage=5&page=1'
+        headers:
+            Host: 244134adc586447f.api-us.cometchat.io
+            Expect: ''
+            Accept-Encoding: ''
+            User-Agent: GuzzleHttp/7
+            accept: application/json
+            apikey: 4c3e5b5a96da90cc4bb3f3013d22e72aaea802c9
+            content-type: application/json
+        body: '[]'
+    response:
+        status:
+            code: 200
+            message: OK
+        headers:
+            Date: 'Thu, 14 Sep 2023 04:53:23 GMT'
+            Content-Type: application/json
+            Content-Length: '1187'
+            Connection: close
+            Server: ''
+            cache-control: 'must-revalidate, no-cache, private'
+            Vary: Accept-Encoding
+            Content-Encoding: none
+            X-RateLimit-Limit: '20000'
+            X-RateLimit-Remaining: '19999'
+            X-RateLimit-Limit-For-App: '100000'
+            X-RateLimit-Remaining-For-App: '99999'
+            Access-Control-Allow-Origin: '*'
+            Access-Control-Allow-Methods: 'OPTIONS,HEAD,GET,POST,PUT,PATCH,DELETE'
+            Access-Control-Allow-Headers: 'Content-Type,Accept,Cache-Control,Authorization,X-Requested-With,appId,apiKey,authToken,onBehalfOf,resource,Accept-Encoding,group,region,sdk,guid,uid,clientEnvironment,extensionId,username,password,callToken,onBehalfOfUser'
+            Accept: application/json
+            Upgrade: 'h2,h2c'
+        body: '{"data":[{"uid":"user_001","name":"user_001","status":"offline","role":"default","blockedByMe":true,"blockedByMeAt":1694666014,"blockedAt":1694666014,"createdAt":1694665783,"conversationId":"user_000_user_user_001"},{"uid":"user_002","name":"user_002","status":"offline","role":"default","blockedByMe":true,"blockedByMeAt":1694666015,"blockedAt":1694666015,"createdAt":1694665785,"conversationId":"user_000_user_user_002"},{"uid":"user_003","name":"user_003","status":"offline","role":"default","blockedByMe":true,"blockedByMeAt":1694666016,"blockedAt":1694666016,"createdAt":1694665786,"conversationId":"user_000_user_user_003"},{"uid":"user_004","name":"user_004","status":"offline","role":"default","blockedByMe":true,"blockedByMeAt":1694666017,"blockedAt":1694666017,"createdAt":1694665787,"conversationId":"user_000_user_user_004"},{"uid":"user_005","name":"user_005","status":"offline","role":"default","blockedByMe":true,"blockedByMeAt":1694666018,"blockedAt":1694666018,"createdAt":1694665788,"conversationId":"user_000_user_user_005"}],"meta":{"pagination":{"total":0,"count":5,"per_page":5,"current_page":1,"total_pages":2},"cursor":{"updatedAt":1694665810,"affix":"prepend"}}}'
+        curl_info:
+            url: 'https://244134adc586447f.api-us.cometchat.io/v3/users/user_000/blockedusers?perPage=5&page=1'
+            content_type: application/json
+            http_code: 200
+            header_size: 765
+            request_size: 264
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 1.371212
+            namelookup_time: 0.132178
+            connect_time: 0.43019
+            pretransfer_time: 1.045688
+            size_upload: 2.0
+            size_download: 1187.0
+            speed_download: 865.0
+            speed_upload: 1.0
+            download_content_length: 1187.0
+            upload_content_length: 2.0
+            starttransfer_time: 1.371148
+            redirect_time: 0.0
+            redirect_url: ''
+            primary_ip: 3.141.182.110
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 192.168.15.243
+            local_port: 52488
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 1045234
+            connect_time_us: 430190
+            namelookup_time_us: 132178
+            pretransfer_time_us: 1045688
+            redirect_time_us: 0
+            starttransfer_time_us: 1371148
+            total_time_us: 1371212
+    index: 0
+-
+    request:
+        method: GET
+        url: 'https://244134adc586447f.api-us.cometchat.io/v3/users/user_000/blockedusers?perPage=5&page=2'
+        headers:
+            Host: 244134adc586447f.api-us.cometchat.io
+            Expect: ''
+            Accept-Encoding: ''
+            User-Agent: GuzzleHttp/7
+            accept: application/json
+            apikey: 4c3e5b5a96da90cc4bb3f3013d22e72aaea802c9
+            content-type: application/json
+        body: '[]'
+    response:
+        status:
+            code: 200
+            message: OK
+        headers:
+            Date: 'Thu, 14 Sep 2023 04:53:24 GMT'
+            Content-Type: application/json
+            Content-Length: '1187'
+            Connection: close
+            Server: ''
+            cache-control: 'must-revalidate, no-cache, private'
+            Vary: Accept-Encoding
+            Content-Encoding: none
+            X-RateLimit-Limit: '20000'
+            X-RateLimit-Remaining: '19998'
+            X-RateLimit-Limit-For-App: '100000'
+            X-RateLimit-Remaining-For-App: '99998'
+            Access-Control-Allow-Origin: '*'
+            Access-Control-Allow-Methods: 'OPTIONS,HEAD,GET,POST,PUT,PATCH,DELETE'
+            Access-Control-Allow-Headers: 'Content-Type,Accept,Cache-Control,Authorization,X-Requested-With,appId,apiKey,authToken,onBehalfOf,resource,Accept-Encoding,group,region,sdk,guid,uid,clientEnvironment,extensionId,username,password,callToken,onBehalfOfUser'
+            Accept: application/json
+            Upgrade: 'h2,h2c'
+        body: '{"data":[{"uid":"user_006","name":"user_006","status":"offline","role":"default","blockedByMe":true,"blockedByMeAt":1694666019,"blockedAt":1694666019,"createdAt":1694665789,"conversationId":"user_000_user_user_006"},{"uid":"user_007","name":"user_007","status":"offline","role":"default","blockedByMe":true,"blockedByMeAt":1694666020,"blockedAt":1694666020,"createdAt":1694665790,"conversationId":"user_000_user_user_007"},{"uid":"user_008","name":"user_008","status":"offline","role":"default","blockedByMe":true,"blockedByMeAt":1694666021,"blockedAt":1694666021,"createdAt":1694665791,"conversationId":"user_000_user_user_008"},{"uid":"user_009","name":"user_009","status":"offline","role":"default","blockedByMe":true,"blockedByMeAt":1694666022,"blockedAt":1694666022,"createdAt":1694665792,"conversationId":"user_000_user_user_009"},{"uid":"user_010","name":"user_010","status":"offline","role":"default","blockedByMe":true,"blockedByMeAt":1694666023,"blockedAt":1694666023,"createdAt":1694665793,"conversationId":"user_000_user_user_010"}],"meta":{"pagination":{"total":0,"count":5,"per_page":5,"current_page":2,"total_pages":3},"cursor":{"updatedAt":1694665810,"affix":"prepend"}}}'
+        curl_info:
+            url: 'https://244134adc586447f.api-us.cometchat.io/v3/users/user_000/blockedusers?perPage=5&page=2'
+            content_type: application/json
+            http_code: 200
+            header_size: 765
+            request_size: 264
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 1.088209
+            namelookup_time: 0.002345
+            connect_time: 0.237122
+            pretransfer_time: 0.779985
+            size_upload: 2.0
+            size_download: 1187.0
+            speed_download: 1090.0
+            speed_upload: 1.0
+            download_content_length: 1187.0
+            upload_content_length: 2.0
+            starttransfer_time: 1.088144
+            redirect_time: 0.0
+            redirect_url: ''
+            primary_ip: 18.218.180.174
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 192.168.15.243
+            local_port: 52493
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 779855
+            connect_time_us: 237122
+            namelookup_time_us: 2345
+            pretransfer_time_us: 779985
+            redirect_time_us: 0
+            starttransfer_time_us: 1088144
+            total_time_us: 1088209
+    index: 0
+-
+    request:
+        method: GET
+        url: 'https://244134adc586447f.api-us.cometchat.io/v3/users/user_000/blockedusers?perPage=5&page=3'
+        headers:
+            Host: 244134adc586447f.api-us.cometchat.io
+            Expect: ''
+            Accept-Encoding: ''
+            User-Agent: GuzzleHttp/7
+            accept: application/json
+            apikey: 4c3e5b5a96da90cc4bb3f3013d22e72aaea802c9
+            content-type: application/json
+        body: '[]'
+    response:
+        status:
+            code: 200
+            message: OK
+        headers:
+            Date: 'Thu, 14 Sep 2023 04:53:25 GMT'
+            Content-Type: application/json
+            Content-Length: '1187'
+            Connection: close
+            Server: ''
+            cache-control: 'must-revalidate, no-cache, private'
+            Vary: Accept-Encoding
+            Content-Encoding: none
+            X-RateLimit-Limit: '20000'
+            X-RateLimit-Remaining: '19997'
+            X-RateLimit-Limit-For-App: '100000'
+            X-RateLimit-Remaining-For-App: '99997'
+            Access-Control-Allow-Origin: '*'
+            Access-Control-Allow-Methods: 'OPTIONS,HEAD,GET,POST,PUT,PATCH,DELETE'
+            Access-Control-Allow-Headers: 'Content-Type,Accept,Cache-Control,Authorization,X-Requested-With,appId,apiKey,authToken,onBehalfOf,resource,Accept-Encoding,group,region,sdk,guid,uid,clientEnvironment,extensionId,username,password,callToken,onBehalfOfUser'
+            Accept: application/json
+            Upgrade: 'h2,h2c'
+        body: '{"data":[{"uid":"user_011","name":"user_011","status":"offline","role":"default","blockedByMe":true,"blockedByMeAt":1694666024,"blockedAt":1694666024,"createdAt":1694665795,"conversationId":"user_000_user_user_011"},{"uid":"user_012","name":"user_012","status":"offline","role":"default","blockedByMe":true,"blockedByMeAt":1694666026,"blockedAt":1694666026,"createdAt":1694665796,"conversationId":"user_000_user_user_012"},{"uid":"user_013","name":"user_013","status":"offline","role":"default","blockedByMe":true,"blockedByMeAt":1694666027,"blockedAt":1694666027,"createdAt":1694665797,"conversationId":"user_000_user_user_013"},{"uid":"user_014","name":"user_014","status":"offline","role":"default","blockedByMe":true,"blockedByMeAt":1694666028,"blockedAt":1694666028,"createdAt":1694665798,"conversationId":"user_000_user_user_014"},{"uid":"user_015","name":"user_015","status":"offline","role":"default","blockedByMe":true,"blockedByMeAt":1694666029,"blockedAt":1694666029,"createdAt":1694665800,"conversationId":"user_000_user_user_015"}],"meta":{"pagination":{"total":0,"count":5,"per_page":5,"current_page":3,"total_pages":4},"cursor":{"updatedAt":1694665810,"affix":"prepend"}}}'
+        curl_info:
+            url: 'https://244134adc586447f.api-us.cometchat.io/v3/users/user_000/blockedusers?perPage=5&page=3'
+            content_type: application/json
+            http_code: 200
+            header_size: 765
+            request_size: 264
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 1.117386
+            namelookup_time: 0.003577
+            connect_time: 0.293184
+            pretransfer_time: 0.805562
+            size_upload: 2.0
+            size_download: 1187.0
+            speed_download: 1062.0
+            speed_upload: 1.0
+            download_content_length: 1187.0
+            upload_content_length: 2.0
+            starttransfer_time: 1.117295
+            redirect_time: 0.0
+            redirect_url: ''
+            primary_ip: 3.140.14.70
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 192.168.15.243
+            local_port: 52498
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 805392
+            connect_time_us: 293184
+            namelookup_time_us: 3577
+            pretransfer_time_us: 805562
+            redirect_time_us: 0
+            starttransfer_time_us: 1117295
+            total_time_us: 1117386
+    index: 0
+-
+    request:
+        method: GET
+        url: 'https://244134adc586447f.api-us.cometchat.io/v3/users/user_000/blockedusers?perPage=5&page=4'
+        headers:
+            Host: 244134adc586447f.api-us.cometchat.io
+            Expect: ''
+            Accept-Encoding: ''
+            User-Agent: GuzzleHttp/7
+            accept: application/json
+            apikey: 4c3e5b5a96da90cc4bb3f3013d22e72aaea802c9
+            content-type: application/json
+        body: '[]'
+    response:
+        status:
+            code: 200
+            message: OK
+        headers:
+            Date: 'Thu, 14 Sep 2023 04:53:26 GMT'
+            Content-Type: application/json
+            Content-Length: '1187'
+            Connection: close
+            Server: ''
+            cache-control: 'must-revalidate, no-cache, private'
+            Vary: Accept-Encoding
+            Content-Encoding: none
+            X-RateLimit-Limit: '20000'
+            X-RateLimit-Remaining: '19996'
+            X-RateLimit-Limit-For-App: '100000'
+            X-RateLimit-Remaining-For-App: '99996'
+            Access-Control-Allow-Origin: '*'
+            Access-Control-Allow-Methods: 'OPTIONS,HEAD,GET,POST,PUT,PATCH,DELETE'
+            Access-Control-Allow-Headers: 'Content-Type,Accept,Cache-Control,Authorization,X-Requested-With,appId,apiKey,authToken,onBehalfOf,resource,Accept-Encoding,group,region,sdk,guid,uid,clientEnvironment,extensionId,username,password,callToken,onBehalfOfUser'
+            Accept: application/json
+        body: '{"data":[{"uid":"user_016","name":"user_016","status":"offline","role":"default","blockedByMe":true,"blockedByMeAt":1694666030,"blockedAt":1694666030,"createdAt":1694665801,"conversationId":"user_000_user_user_016"},{"uid":"user_017","name":"user_017","status":"offline","role":"default","blockedByMe":true,"blockedByMeAt":1694666031,"blockedAt":1694666031,"createdAt":1694665802,"conversationId":"user_000_user_user_017"},{"uid":"user_018","name":"user_018","status":"offline","role":"default","blockedByMe":true,"blockedByMeAt":1694666032,"blockedAt":1694666032,"createdAt":1694665803,"conversationId":"user_000_user_user_018"},{"uid":"user_019","name":"user_019","status":"offline","role":"default","blockedByMe":true,"blockedByMeAt":1694666034,"blockedAt":1694666034,"createdAt":1694665804,"conversationId":"user_000_user_user_019"},{"uid":"user_020","name":"user_020","status":"offline","role":"default","blockedByMe":true,"blockedByMeAt":1694666035,"blockedAt":1694666035,"createdAt":1694665805,"conversationId":"user_000_user_user_020"}],"meta":{"pagination":{"total":0,"count":5,"per_page":5,"current_page":4,"total_pages":5},"cursor":{"updatedAt":1694665810,"affix":"prepend"}}}'
+        curl_info:
+            url: 'https://244134adc586447f.api-us.cometchat.io/v3/users/user_000/blockedusers?perPage=5&page=4'
+            content_type: application/json
+            http_code: 200
+            header_size: 748
+            request_size: 264
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 1.312768
+            namelookup_time: 0.002072
+            connect_time: 0.288196
+            pretransfer_time: 0.90299
+            size_upload: 2.0
+            size_download: 1187.0
+            speed_download: 904.0
+            speed_upload: 1.0
+            download_content_length: 1187.0
+            upload_content_length: 2.0
+            starttransfer_time: 1.312703
+            redirect_time: 0.0
+            redirect_url: ''
+            primary_ip: 18.218.180.174
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 192.168.15.243
+            local_port: 52503
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 902794
+            connect_time_us: 288196
+            namelookup_time_us: 2072
+            pretransfer_time_us: 902990
+            redirect_time_us: 0
+            starttransfer_time_us: 1312703
+            total_time_us: 1312768
+    index: 0
+-
+    request:
+        method: GET
+        url: 'https://244134adc586447f.api-us.cometchat.io/v3/users/user_000/blockedusers?perPage=5&page=5'
+        headers:
+            Host: 244134adc586447f.api-us.cometchat.io
+            Expect: ''
+            Accept-Encoding: ''
+            User-Agent: GuzzleHttp/7
+            accept: application/json
+            apikey: 4c3e5b5a96da90cc4bb3f3013d22e72aaea802c9
+            content-type: application/json
+        body: '[]'
+    response:
+        status:
+            code: 200
+            message: OK
+        headers:
+            Date: 'Thu, 14 Sep 2023 04:53:27 GMT'
+            Content-Type: application/json
+            Content-Length: '980'
+            Connection: close
+            Server: ''
+            cache-control: 'must-revalidate, no-cache, private'
+            Vary: Accept-Encoding
+            Content-Encoding: none
+            X-RateLimit-Limit: '20000'
+            X-RateLimit-Remaining: '19995'
+            X-RateLimit-Limit-For-App: '100000'
+            X-RateLimit-Remaining-For-App: '99995'
+            Access-Control-Allow-Origin: '*'
+            Access-Control-Allow-Methods: 'OPTIONS,HEAD,GET,POST,PUT,PATCH,DELETE'
+            Access-Control-Allow-Headers: 'Content-Type,Accept,Cache-Control,Authorization,X-Requested-With,appId,apiKey,authToken,onBehalfOf,resource,Accept-Encoding,group,region,sdk,guid,uid,clientEnvironment,extensionId,username,password,callToken,onBehalfOfUser'
+            Accept: application/json
+            Upgrade: 'h2,h2c'
+        body: '{"data":[{"uid":"user_021","name":"user_021","status":"offline","role":"default","blockedByMe":true,"blockedByMeAt":1694666036,"blockedAt":1694666036,"createdAt":1694665807,"conversationId":"user_000_user_user_021"},{"uid":"user_022","name":"user_022","status":"offline","role":"default","blockedByMe":true,"blockedByMeAt":1694666037,"blockedAt":1694666037,"createdAt":1694665808,"conversationId":"user_000_user_user_022"},{"uid":"user_023","name":"user_023","status":"offline","role":"default","blockedByMe":true,"blockedByMeAt":1694666038,"blockedAt":1694666038,"createdAt":1694665809,"conversationId":"user_000_user_user_023"},{"uid":"user_024","name":"user_024","status":"offline","role":"default","blockedByMe":true,"blockedByMeAt":1694666040,"blockedAt":1694666040,"createdAt":1694665810,"conversationId":"user_000_user_user_024"}],"meta":{"pagination":{"total":0,"count":4,"per_page":5,"current_page":5,"total_pages":5},"cursor":{"updatedAt":1694665810,"affix":"prepend"}}}'
+        curl_info:
+            url: 'https://244134adc586447f.api-us.cometchat.io/v3/users/user_000/blockedusers?perPage=5&page=5'
+            content_type: application/json
+            http_code: 200
+            header_size: 764
+            request_size: 264
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 1.065194
+            namelookup_time: 0.002286
+            connect_time: 0.289206
+            pretransfer_time: 0.804422
+            size_upload: 2.0
+            size_download: 980.0
+            speed_download: 920.0
+            speed_upload: 1.0
+            download_content_length: 980.0
+            upload_content_length: 2.0
+            starttransfer_time: 1.06513
+            redirect_time: 0.0
+            redirect_url: ''
+            primary_ip: 18.218.180.174
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 192.168.15.243
+            local_port: 52512
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 804044
+            connect_time_us: 289206
+            namelookup_time_us: 2286
+            pretransfer_time_us: 804422
+            redirect_time_us: 0
+            starttransfer_time_us: 1065130
+            total_time_us: 1065194
+    index: 0

@@ -2,7 +2,7 @@
 -
     request:
         method: PUT
-        url: 'https://244134adc586447f.api-us.cometchat.io/v3/users/uuid_999'
+        url: 'https://244134adc586447f.api-us.cometchat.io/v3/users/user_000'
         headers:
             Host: 244134adc586447f.api-us.cometchat.io
             Expect: ''
@@ -11,66 +11,66 @@
             accept: application/json
             apikey: 4c3e5b5a96da90cc4bb3f3013d22e72aaea802c9
             content-type: application/json
-        body: '{"uid":"uuid_999","name":"test","link":"https:\/\/foo.bar","unset":["avatar"]}'
+        body: '{"uid":"user_000","name":"test","link":"https:\/\/foo.bar","unset":["avatar"]}'
     response:
         status:
             code: 200
             message: OK
         headers:
-            Date: 'Tue, 05 Sep 2023 05:04:07 GMT'
+            Date: 'Thu, 14 Sep 2023 05:02:36 GMT'
             Content-Type: application/json
             Content-Length: '150'
             Connection: keep-alive
-            Server: 'Apache/2.4.54 () OpenSSL/1.0.2k-fips'
+            Server: ''
             cache-control: 'must-revalidate, no-cache, private'
             Vary: Accept-Encoding
             Content-Encoding: none
             X-RateLimit-Limit: '20000'
             X-RateLimit-Remaining: '19999'
             X-RateLimit-Limit-For-App: '100000'
-            X-RateLimit-Remaining-For-App: '99997'
+            X-RateLimit-Remaining-For-App: '99999'
             Access-Control-Allow-Origin: '*'
             Access-Control-Allow-Methods: 'OPTIONS,HEAD,GET,POST,PUT,PATCH,DELETE'
-            Access-Control-Allow-Headers: 'Content-Type,Accept,Cache-Control,Authorization,X-Requested-With,appId,apiKey,authToken,onBehalfOf,resource,Accept-Encoding,group,region,sdk,guid,uid,clientEnvironment,extensionId,username,password,callToken'
+            Access-Control-Allow-Headers: 'Content-Type,Accept,Cache-Control,Authorization,X-Requested-With,appId,apiKey,authToken,onBehalfOf,resource,Accept-Encoding,group,region,sdk,guid,uid,clientEnvironment,extensionId,username,password,callToken,onBehalfOfUser'
             Accept: application/json
             Upgrade: 'h2,h2c'
-        body: '{"data":{"uid":"uuid_999","name":"test","link":"https:\/\/foo.bar","status":"offline","role":"default","createdAt":1693890190,"updatedAt":1693890247}}'
+        body: '{"data":{"uid":"user_000","name":"test","link":"https:\/\/foo.bar","status":"offline","role":"default","createdAt":1694667681,"updatedAt":1694667756}}'
         curl_info:
-            url: 'https://244134adc586447f.api-us.cometchat.io/v3/users/uuid_999'
+            url: 'https://244134adc586447f.api-us.cometchat.io/v3/users/user_000'
             content_type: application/json
             http_code: 200
-            header_size: 790
+            header_size: 769
             request_size: 311
             filetime: -1
             ssl_verify_result: 0
             redirect_count: 0
-            total_time: 1.271187
-            namelookup_time: 0.001808
-            connect_time: 0.416399
-            pretransfer_time: 0.989864
+            total_time: 1.1751
+            namelookup_time: 0.003238
+            connect_time: 0.353093
+            pretransfer_time: 0.821179
             size_upload: 78.0
             size_download: 150.0
-            speed_download: 117.0
-            speed_upload: 61.0
+            speed_download: 127.0
+            speed_upload: 66.0
             download_content_length: 150.0
             upload_content_length: 78.0
-            starttransfer_time: 1.271157
+            starttransfer_time: 1.17504
             redirect_time: 0.0
             redirect_url: ''
-            primary_ip: 3.23.177.254
+            primary_ip: 18.218.180.174
             certinfo: {  }
             primary_port: 443
             local_ip: 192.168.15.243
-            local_port: 50733
+            local_port: 54833
             http_version: 2
             protocol: 2
             ssl_verifyresult: 0
             scheme: HTTPS
-            appconnect_time_us: 989605
-            connect_time_us: 416399
-            namelookup_time_us: 1808
-            pretransfer_time_us: 989864
+            appconnect_time_us: 821013
+            connect_time_us: 353093
+            namelookup_time_us: 3238
+            pretransfer_time_us: 821179
             redirect_time_us: 0
-            starttransfer_time_us: 1271157
-            total_time_us: 1271187
+            starttransfer_time_us: 1175040
+            total_time_us: 1175100
     index: 0

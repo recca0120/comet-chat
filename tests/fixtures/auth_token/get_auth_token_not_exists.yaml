@@ -2,7 +2,7 @@
 -
     request:
         method: GET
-        url: 'https://244134adc586447f.api-us.cometchat.io/v3/users/uuid_999/auth_tokens/uuid_999_169389049788c05534c11cef2e35b3e436c60073'
+        url: 'https://244134adc586447f.api-us.cometchat.io/v3/users/user_000/auth_tokens/user_000_169389049788c05534c11cef2e35b3e436c60073'
         headers:
             Host: 244134adc586447f.api-us.cometchat.io
             Expect: ''
@@ -17,60 +17,60 @@
             code: 404
             message: 'Not Found'
         headers:
-            Date: 'Tue, 05 Sep 2023 05:13:12 GMT'
+            Date: 'Thu, 14 Sep 2023 05:12:05 GMT'
             Content-Type: application/json
             Content-Length: '146'
             Connection: close
-            Server: 'Apache/2.4.54 () OpenSSL/1.0.2k-fips'
+            Server: ''
             cache-control: 'must-revalidate, no-cache, private'
             Vary: Accept-Encoding
             Content-Encoding: none
             X-RateLimit-Limit: '20000'
-            X-RateLimit-Remaining: '19997'
+            X-RateLimit-Remaining: '19999'
             X-RateLimit-Limit-For-App: '100000'
-            X-RateLimit-Remaining-For-App: '99997'
+            X-RateLimit-Remaining-For-App: '99999'
             Access-Control-Allow-Origin: '*'
             Access-Control-Allow-Methods: 'OPTIONS,HEAD,GET,POST,PUT,PATCH,DELETE'
-            Access-Control-Allow-Headers: 'Content-Type,Accept,Cache-Control,Authorization,X-Requested-With,appId,apiKey,authToken,onBehalfOf,resource,Accept-Encoding,group,region,sdk,guid,uid,clientEnvironment,extensionId,username,password,callToken'
+            Access-Control-Allow-Headers: 'Content-Type,Accept,Cache-Control,Authorization,X-Requested-With,appId,apiKey,authToken,onBehalfOf,resource,Accept-Encoding,group,region,sdk,guid,uid,clientEnvironment,extensionId,username,password,callToken,onBehalfOfUser'
             Accept: application/json
             Upgrade: 'h2,h2c'
         body: '{"error":{"message":"Auth token does not exist.","devMessage":"Auth token does not exist.","source":"chat-api","code":"ERR_AUTH_TOKEN_NOT_FOUND"}}'
         curl_info:
-            url: 'https://244134adc586447f.api-us.cometchat.io/v3/users/uuid_999/auth_tokens/uuid_999_169389049788c05534c11cef2e35b3e436c60073'
+            url: 'https://244134adc586447f.api-us.cometchat.io/v3/users/user_000/auth_tokens/user_000_169389049788c05534c11cef2e35b3e436c60073'
             content_type: application/json
             http_code: 404
-            header_size: 792
+            header_size: 771
             request_size: 296
             filetime: -1
             ssl_verify_result: 0
             redirect_count: 0
-            total_time: 0.989185
-            namelookup_time: 0.002038
-            connect_time: 0.250582
-            pretransfer_time: 0.693678
+            total_time: 1.161718
+            namelookup_time: 0.114538
+            connect_time: 0.380511
+            pretransfer_time: 0.898371
             size_upload: 2.0
             size_download: 146.0
-            speed_download: 147.0
-            speed_upload: 2.0
+            speed_download: 125.0
+            speed_upload: 1.0
             download_content_length: 146.0
             upload_content_length: 2.0
-            starttransfer_time: 0.989109
+            starttransfer_time: 1.161666
             redirect_time: 0.0
             redirect_url: ''
-            primary_ip: 3.128.187.224
+            primary_ip: 3.140.14.70
             certinfo: {  }
             primary_port: 443
             local_ip: 192.168.15.243
-            local_port: 51120
+            local_port: 57261
             http_version: 2
             protocol: 2
             ssl_verifyresult: 0
             scheme: HTTPS
-            appconnect_time_us: 693261
-            connect_time_us: 250582
-            namelookup_time_us: 2038
-            pretransfer_time_us: 693678
+            appconnect_time_us: 897570
+            connect_time_us: 380511
+            namelookup_time_us: 114538
+            pretransfer_time_us: 898371
             redirect_time_us: 0
-            starttransfer_time_us: 989109
-            total_time_us: 989185
+            starttransfer_time_us: 1161666
+            total_time_us: 1161718
     index: 0

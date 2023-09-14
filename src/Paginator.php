@@ -10,10 +10,30 @@ class Paginator implements Iterator, Countable
     private array $items;
     private array $meta;
 
-    public function __construct(array $result)
+    public function __construct(array $result, private readonly int $perPage, private readonly int $currentPage)
     {
         $this->items = $result['data'];
         $this->meta = $result['meta'];
+    }
+
+    public function items(): array
+    {
+        return $this->items;
+    }
+
+    public function currentPage(): int
+    {
+        return $this->currentPage;
+    }
+
+    public function perPage(): int
+    {
+        return $this->perPage;
+    }
+
+    public function last(): array
+    {
+        return last($this->items);
     }
 
     public function hasMorePages(): bool

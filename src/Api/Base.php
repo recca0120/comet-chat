@@ -41,17 +41,17 @@ abstract class Base
         array $headers = [],
         array $data = []
     ): Generator {
+        $currentPage = 1;
+        $perPage = (int) ($query['perPage'] ?? 100);
         while (true) {
             $paginator = new Paginator($this->client->sendRequest(
                 $method,
                 $path.'?'.http_build_query($query),
                 $headers,
                 $data
-            ));
+            ), $perPage, $currentPage);
 
-            foreach ($paginator as $item) {
-                yield $item;
-            }
+            yield $paginator;
 
             if (! $paginator->hasMorePages()) {
                 break;
@@ -60,6 +60,8 @@ abstract class Base
             foreach ($paginator->nextQuery() as $key => $value) {
                 $query[$key] = $value;
             }
+
+            $currentPage++;
         }
     }
 }
