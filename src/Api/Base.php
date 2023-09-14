@@ -1,10 +1,12 @@
 <?php
 
-namespace Recca0120\CometChat;
+namespace Recca0120\CometChat\Api;
 
 use Generator;
 use JsonException;
 use Psr\Http\Client\ClientExceptionInterface;
+use Recca0120\CometChat\Client;
+use Recca0120\CometChat\Paginator;
 
 abstract class Base
 {

@@ -1,11 +1,12 @@
 <?php
 
-namespace Recca0120\CometChat\Tests;
+namespace Recca0120\CometChat\Tests\Api;
 
 use Http\Client\Exception\HttpException;
 use JsonException;
 use Psr\Http\Client\ClientExceptionInterface;
-use Recca0120\CometChat\AuthToken;
+use Recca0120\CometChat\Api\AuthToken;
+use Recca0120\CometChat\Tests\TestCase;
 use VCR\VCR;
 
 class AuthTokenTest extends TestCase

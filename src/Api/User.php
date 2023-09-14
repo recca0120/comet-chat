@@ -1,6 +1,6 @@
 <?php
 
-namespace Recca0120\CometChat;
+namespace Recca0120\CometChat\Api;
 
 use Generator;
 use JsonException;

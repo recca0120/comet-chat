@@ -1,10 +1,11 @@
 <?php
 
-namespace Recca0120\CometChat\Tests;
+namespace Recca0120\CometChat\Tests\Api;
 
 use JsonException;
 use Psr\Http\Client\ClientExceptionInterface;
-use Recca0120\CometChat\Message;
+use Recca0120\CometChat\Api\Message;
+use Recca0120\CometChat\Tests\TestCase;
 use VCR\VCR;
 
 class MessageTest extends TestCase

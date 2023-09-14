@@ -4,6 +4,10 @@ namespace Recca0120\CometChat;
 
 use GuzzleHttp\Client as GuzzleClient;
 use Illuminate\Support\ServiceProvider;
+use Recca0120\CometChat\Api\AuthToken;
+use Recca0120\CometChat\Api\Conversation;
+use Recca0120\CometChat\Api\Message;
+use Recca0120\CometChat\Api\User;
 
 class CometChatServiceProvider extends ServiceProvider
 {

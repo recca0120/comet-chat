@@ -10,6 +10,10 @@ use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\StreamFactoryInterface;
+use Recca0120\CometChat\Api\AuthToken;
+use Recca0120\CometChat\Api\Conversation;
+use Recca0120\CometChat\Api\Message;
+use Recca0120\CometChat\Api\User;
 
 class Client
 {
