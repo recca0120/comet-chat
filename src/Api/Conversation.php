@@ -36,4 +36,15 @@ class Conversation extends Base
             'page' => $page,
         ], ['onBehalfOf' => $onBehalfOf]);
     }
+
+    /**
+     * @throws ClientExceptionInterface
+     * @throws JsonException
+     */
+    public function getUserConversation(string $uid, string $onBehalfOf): array
+    {
+        return $this->sendRequest('GET', 'users/'.$uid.'/conversation', [
+            'onBehalfOf' => $onBehalfOf,
+        ]);
+    }
 }

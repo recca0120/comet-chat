@@ -1,0 +1,600 @@
+
+-
+    request:
+        method: GET
+        url: 'https://244134adc586447f.api-us.cometchat.io/v3/users?perPage=100&page=1'
+        headers:
+            Host: 244134adc586447f.api-us.cometchat.io
+            Expect: ''
+            Accept-Encoding: ''
+            User-Agent: GuzzleHttp/7
+            accept: application/json
+            apikey: 4c3e5b5a96da90cc4bb3f3013d22e72aaea802c9
+            content-type: application/json
+        body: '[]'
+    response:
+        status:
+            code: 200
+            message: OK
+        headers:
+            Date: 'Fri, 15 Sep 2023 19:01:09 GMT'
+            Content-Type: application/json
+            Content-Length: '346'
+            Connection: close
+            Server: ''
+            cache-control: 'must-revalidate, no-cache, private'
+            Vary: Accept-Encoding
+            Content-Encoding: none
+            X-RateLimit-Limit: '20000'
+            X-RateLimit-Remaining: '19998'
+            X-RateLimit-Limit-For-App: '100000'
+            X-RateLimit-Remaining-For-App: '99998'
+            Access-Control-Allow-Origin: '*'
+            Access-Control-Allow-Methods: 'OPTIONS,HEAD,GET,POST,PUT,PATCH,DELETE'
+            Access-Control-Allow-Headers: 'Content-Type,Accept,Cache-Control,Authorization,X-Requested-With,appId,apiKey,authToken,onBehalfOf,resource,Accept-Encoding,group,region,sdk,guid,uid,clientEnvironment,extensionId,username,password,callToken,onBehalfOfUser'
+            Accept: application/json
+            Upgrade: 'h2,h2c'
+        body: '{"data":[{"uid":"user_001","name":"user_001","status":"offline","role":"default","createdAt":1694803978},{"uid":"user_000","name":"user_000","status":"offline","role":"default","createdAt":1694803977}],"meta":{"pagination":{"total":2,"count":2,"per_page":100,"current_page":1,"total_pages":1},"cursor":{"updatedAt":1694803978,"affix":"prepend"}}}'
+        curl_info:
+            url: 'https://244134adc586447f.api-us.cometchat.io/v3/users?perPage=100&page=1'
+            content_type: application/json
+            http_code: 200
+            header_size: 764
+            request_size: 244
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 1.187943
+            namelookup_time: 0.100592
+            connect_time: 0.377912
+            pretransfer_time: 0.863078
+            size_upload: 2.0
+            size_download: 346.0
+            speed_download: 291.0
+            speed_upload: 1.0
+            download_content_length: 346.0
+            upload_content_length: 2.0
+            starttransfer_time: 1.187868
+            redirect_time: 0.0
+            redirect_url: ''
+            primary_ip: 3.140.14.70
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 192.168.15.243
+            local_port: 61337
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 862996
+            connect_time_us: 377912
+            namelookup_time_us: 100592
+            pretransfer_time_us: 863078
+            redirect_time_us: 0
+            starttransfer_time_us: 1187868
+            total_time_us: 1187943
+    index: 0
+-
+    request:
+        method: DELETE
+        url: 'https://244134adc586447f.api-us.cometchat.io/v3/users/user_001'
+        headers:
+            Host: 244134adc586447f.api-us.cometchat.io
+            Expect: ''
+            Accept-Encoding: ''
+            User-Agent: GuzzleHttp/7
+            accept: application/json
+            apikey: 4c3e5b5a96da90cc4bb3f3013d22e72aaea802c9
+            content-type: application/json
+        body: '{"permanent":true}'
+    response:
+        status:
+            code: 200
+            message: OK
+        headers:
+            Date: 'Fri, 15 Sep 2023 19:01:10 GMT'
+            Content-Type: application/json
+            Content-Length: '91'
+            Connection: keep-alive
+            Server: ''
+            cache-control: 'must-revalidate, no-cache, private'
+            Vary: Accept-Encoding
+            Content-Encoding: none
+            X-RateLimit-Limit: '10000'
+            X-RateLimit-Remaining: '9999'
+            X-RateLimit-Limit-For-App: '100000'
+            X-RateLimit-Remaining-For-App: '99997'
+            Access-Control-Allow-Origin: '*'
+            Access-Control-Allow-Methods: 'OPTIONS,HEAD,GET,POST,PUT,PATCH,DELETE'
+            Access-Control-Allow-Headers: 'Content-Type,Accept,Cache-Control,Authorization,X-Requested-With,appId,apiKey,authToken,onBehalfOf,resource,Accept-Encoding,group,region,sdk,guid,uid,clientEnvironment,extensionId,username,password,callToken,onBehalfOfUser'
+            Accept: application/json
+            Upgrade: 'h2,h2c'
+        body: '{"data":{"success":true,"message":"User with UID user_001 has been deleted successfully."}}'
+        curl_info:
+            url: 'https://244134adc586447f.api-us.cometchat.io/v3/users/user_001'
+            content_type: application/json
+            http_code: 200
+            header_size: 767
+            request_size: 254
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 1.05594
+            namelookup_time: 0.001205
+            connect_time: 0.263093
+            pretransfer_time: 0.737472
+            size_upload: 18.0
+            size_download: 91.0
+            speed_download: 86.0
+            speed_upload: 17.0
+            download_content_length: 91.0
+            upload_content_length: 18.0
+            starttransfer_time: 1.055845
+            redirect_time: 0.0
+            redirect_url: ''
+            primary_ip: 18.218.180.174
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 192.168.15.243
+            local_port: 61339
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 737217
+            connect_time_us: 263093
+            namelookup_time_us: 1205
+            pretransfer_time_us: 737472
+            redirect_time_us: 0
+            starttransfer_time_us: 1055845
+            total_time_us: 1055940
+    index: 0
+-
+    request:
+        method: DELETE
+        url: 'https://244134adc586447f.api-us.cometchat.io/v3/users/user_000'
+        headers:
+            Host: 244134adc586447f.api-us.cometchat.io
+            Expect: ''
+            Accept-Encoding: ''
+            User-Agent: GuzzleHttp/7
+            accept: application/json
+            apikey: 4c3e5b5a96da90cc4bb3f3013d22e72aaea802c9
+            content-type: application/json
+        body: '{"permanent":true}'
+    response:
+        status:
+            code: 200
+            message: OK
+        headers:
+            Date: 'Fri, 15 Sep 2023 19:01:11 GMT'
+            Content-Type: application/json
+            Content-Length: '91'
+            Connection: keep-alive
+            Server: ''
+            cache-control: 'must-revalidate, no-cache, private'
+            Vary: Accept-Encoding
+            Content-Encoding: none
+            X-RateLimit-Limit: '10000'
+            X-RateLimit-Remaining: '9998'
+            X-RateLimit-Limit-For-App: '100000'
+            X-RateLimit-Remaining-For-App: '99996'
+            Access-Control-Allow-Origin: '*'
+            Access-Control-Allow-Methods: 'OPTIONS,HEAD,GET,POST,PUT,PATCH,DELETE'
+            Access-Control-Allow-Headers: 'Content-Type,Accept,Cache-Control,Authorization,X-Requested-With,appId,apiKey,authToken,onBehalfOf,resource,Accept-Encoding,group,region,sdk,guid,uid,clientEnvironment,extensionId,username,password,callToken,onBehalfOfUser'
+            Accept: application/json
+            Upgrade: 'h2,h2c'
+        body: '{"data":{"success":true,"message":"User with UID user_000 has been deleted successfully."}}'
+        curl_info:
+            url: 'https://244134adc586447f.api-us.cometchat.io/v3/users/user_000'
+            content_type: application/json
+            http_code: 200
+            header_size: 767
+            request_size: 254
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 1.03375
+            namelookup_time: 0.001842
+            connect_time: 0.237695
+            pretransfer_time: 0.717408
+            size_upload: 18.0
+            size_download: 91.0
+            speed_download: 88.0
+            speed_upload: 17.0
+            download_content_length: 91.0
+            upload_content_length: 18.0
+            starttransfer_time: 1.033668
+            redirect_time: 0.0
+            redirect_url: ''
+            primary_ip: 3.141.182.110
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 192.168.15.243
+            local_port: 61340
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 716954
+            connect_time_us: 237695
+            namelookup_time_us: 1842
+            pretransfer_time_us: 717408
+            redirect_time_us: 0
+            starttransfer_time_us: 1033668
+            total_time_us: 1033750
+    index: 0
+-
+    request:
+        method: POST
+        url: 'https://244134adc586447f.api-us.cometchat.io/v3/users'
+        headers:
+            Host: 244134adc586447f.api-us.cometchat.io
+            Expect: ''
+            Accept-Encoding: ''
+            User-Agent: GuzzleHttp/7
+            accept: application/json
+            apikey: 4c3e5b5a96da90cc4bb3f3013d22e72aaea802c9
+            content-type: application/json
+        body: '{"uid":"user_000","name":"user_000","withAuthToken":true}'
+    response:
+        status:
+            code: 200
+            message: OK
+        headers:
+            Date: 'Fri, 15 Sep 2023 19:01:12 GMT'
+            Content-Type: application/json
+            Content-Length: '168'
+            Connection: keep-alive
+            Server: ''
+            cache-control: 'must-revalidate, no-cache, private'
+            Vary: Accept-Encoding
+            Content-Encoding: none
+            X-RateLimit-Limit: '10000'
+            X-RateLimit-Remaining: '9999'
+            X-RateLimit-Limit-For-App: '100000'
+            X-RateLimit-Remaining-For-App: '99995'
+            Access-Control-Allow-Origin: '*'
+            Access-Control-Allow-Methods: 'OPTIONS,HEAD,GET,POST,PUT,PATCH,DELETE'
+            Access-Control-Allow-Headers: 'Content-Type,Accept,Cache-Control,Authorization,X-Requested-With,appId,apiKey,authToken,onBehalfOf,resource,Accept-Encoding,group,region,sdk,guid,uid,clientEnvironment,extensionId,username,password,callToken,onBehalfOfUser'
+            Accept: application/json
+        body: '{"data":{"uid":"user_000","name":"user_000","status":"offline","role":"default","createdAt":1694804472,"authToken":"user_000_1694804472e8a2d48a3d9153f91710ef7637918e"}}'
+        curl_info:
+            url: 'https://244134adc586447f.api-us.cometchat.io/v3/users'
+            content_type: application/json
+            http_code: 200
+            header_size: 751
+            request_size: 282
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 1.032584
+            namelookup_time: 0.001749
+            connect_time: 0.236968
+            pretransfer_time: 0.719267
+            size_upload: 57.0
+            size_download: 168.0
+            speed_download: 162.0
+            speed_upload: 55.0
+            download_content_length: 168.0
+            upload_content_length: 57.0
+            starttransfer_time: 1.03251
+            redirect_time: 0.0
+            redirect_url: ''
+            primary_ip: 3.141.182.110
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 192.168.15.243
+            local_port: 61342
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 718829
+            connect_time_us: 236968
+            namelookup_time_us: 1749
+            pretransfer_time_us: 719267
+            redirect_time_us: 0
+            starttransfer_time_us: 1032510
+            total_time_us: 1032584
+    index: 0
+-
+    request:
+        method: POST
+        url: 'https://244134adc586447f.api-us.cometchat.io/v3/users'
+        headers:
+            Host: 244134adc586447f.api-us.cometchat.io
+            Expect: ''
+            Accept-Encoding: ''
+            User-Agent: GuzzleHttp/7
+            accept: application/json
+            apikey: 4c3e5b5a96da90cc4bb3f3013d22e72aaea802c9
+            content-type: application/json
+        body: '{"uid":"user_001","name":"user_001","withAuthToken":true}'
+    response:
+        status:
+            code: 200
+            message: OK
+        headers:
+            Date: 'Fri, 15 Sep 2023 19:01:13 GMT'
+            Content-Type: application/json
+            Content-Length: '168'
+            Connection: keep-alive
+            Server: ''
+            cache-control: 'must-revalidate, no-cache, private'
+            Vary: Accept-Encoding
+            Content-Encoding: none
+            X-RateLimit-Limit: '10000'
+            X-RateLimit-Remaining: '9998'
+            X-RateLimit-Limit-For-App: '100000'
+            X-RateLimit-Remaining-For-App: '99994'
+            Access-Control-Allow-Origin: '*'
+            Access-Control-Allow-Methods: 'OPTIONS,HEAD,GET,POST,PUT,PATCH,DELETE'
+            Access-Control-Allow-Headers: 'Content-Type,Accept,Cache-Control,Authorization,X-Requested-With,appId,apiKey,authToken,onBehalfOf,resource,Accept-Encoding,group,region,sdk,guid,uid,clientEnvironment,extensionId,username,password,callToken,onBehalfOfUser'
+            Accept: application/json
+        body: '{"data":{"uid":"user_001","name":"user_001","status":"offline","role":"default","createdAt":1694804473,"authToken":"user_001_169480447398fe43be5de182c805359fc0598ddb"}}'
+        curl_info:
+            url: 'https://244134adc586447f.api-us.cometchat.io/v3/users'
+            content_type: application/json
+            http_code: 200
+            header_size: 751
+            request_size: 282
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 1.154174
+            namelookup_time: 0.002631
+            connect_time: 0.265266
+            pretransfer_time: 0.788289
+            size_upload: 57.0
+            size_download: 168.0
+            speed_download: 145.0
+            speed_upload: 49.0
+            download_content_length: 168.0
+            upload_content_length: 57.0
+            starttransfer_time: 1.154096
+            redirect_time: 0.0
+            redirect_url: ''
+            primary_ip: 3.141.182.110
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 192.168.15.243
+            local_port: 61343
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 788069
+            connect_time_us: 265266
+            namelookup_time_us: 2631
+            pretransfer_time_us: 788289
+            redirect_time_us: 0
+            starttransfer_time_us: 1154096
+            total_time_us: 1154174
+    index: 0
+-
+    request:
+        method: GET
+        url: 'https://244134adc586447f.api-us.cometchat.io/v3/messages'
+        headers:
+            Host: 244134adc586447f.api-us.cometchat.io
+            Expect: ''
+            Accept-Encoding: ''
+            User-Agent: GuzzleHttp/7
+            accept: application/json
+            apikey: 4c3e5b5a96da90cc4bb3f3013d22e72aaea802c9
+            content-type: application/json
+        body: '[]'
+    response:
+        status:
+            code: 200
+            message: OK
+        headers:
+            Date: 'Fri, 15 Sep 2023 19:01:14 GMT'
+            Content-Type: application/json
+            Content-Length: '151'
+            Connection: close
+            Server: ''
+            cache-control: 'must-revalidate, no-cache, private'
+            Vary: Accept-Encoding
+            Content-Encoding: none
+            X-RateLimit-Limit: '20000'
+            X-RateLimit-Remaining: '19997'
+            X-RateLimit-Limit-For-App: '100000'
+            X-RateLimit-Remaining-For-App: '99993'
+            Access-Control-Allow-Origin: '*'
+            Access-Control-Allow-Methods: 'OPTIONS,HEAD,GET,POST,PUT,PATCH,DELETE'
+            Access-Control-Allow-Headers: 'Content-Type,Accept,Cache-Control,Authorization,X-Requested-With,appId,apiKey,authToken,onBehalfOf,resource,Accept-Encoding,group,region,sdk,guid,uid,clientEnvironment,extensionId,username,password,callToken,onBehalfOfUser'
+            Accept: application/json
+        body: '{"data":[],"meta":{"previous":{"affix":"prepend","sentAt":1694804474},"current":{"limit":100,"count":0},"next":{"affix":"append","sentAt":1694804474}}}'
+        curl_info:
+            url: 'https://244134adc586447f.api-us.cometchat.io/v3/messages'
+            content_type: application/json
+            http_code: 200
+            header_size: 747
+            request_size: 228
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 1.017698
+            namelookup_time: 0.003062
+            connect_time: 0.238296
+            pretransfer_time: 0.716813
+            size_upload: 2.0
+            size_download: 151.0
+            speed_download: 148.0
+            speed_upload: 1.0
+            download_content_length: 151.0
+            upload_content_length: 2.0
+            starttransfer_time: 1.017622
+            redirect_time: 0.0
+            redirect_url: ''
+            primary_ip: 3.141.182.110
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 192.168.15.243
+            local_port: 61345
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 716607
+            connect_time_us: 238296
+            namelookup_time_us: 3062
+            pretransfer_time_us: 716813
+            redirect_time_us: 0
+            starttransfer_time_us: 1017622
+            total_time_us: 1017698
+    index: 0
+-
+    request:
+        method: POST
+        url: 'https://244134adc586447f.api-us.cometchat.io/v3/messages'
+        headers:
+            Host: 244134adc586447f.api-us.cometchat.io
+            Expect: ''
+            Accept-Encoding: ''
+            User-Agent: GuzzleHttp/7
+            accept: application/json
+            apikey: 4c3e5b5a96da90cc4bb3f3013d22e72aaea802c9
+            content-type: application/json
+            onBehalfOf: user_000
+        body: '{"receiver":"user_001","receiverType":"user","category":"message","type":"text","data":{"text":"Hi Tom!"}}'
+    response:
+        status:
+            code: 200
+            message: OK
+        headers:
+            Date: 'Fri, 15 Sep 2023 19:01:16 GMT'
+            Content-Type: application/json
+            Content-Length: '561'
+            Connection: keep-alive
+            Server: ''
+            cache-control: 'must-revalidate, no-cache, private'
+            Vary: Accept-Encoding
+            Content-Encoding: none
+            X-RateLimit-Limit: '20000'
+            X-RateLimit-Remaining: '19996'
+            X-RateLimit-Limit-For-App: '100000'
+            X-RateLimit-Remaining-For-App: '99992'
+            Access-Control-Allow-Origin: '*'
+            Access-Control-Allow-Methods: 'OPTIONS,HEAD,GET,POST,PUT,PATCH,DELETE'
+            Access-Control-Allow-Headers: 'Content-Type,Accept,Cache-Control,Authorization,X-Requested-With,appId,apiKey,authToken,onBehalfOf,resource,Accept-Encoding,group,region,sdk,guid,uid,clientEnvironment,extensionId,username,password,callToken,onBehalfOfUser'
+            Accept: application/json
+            Upgrade: 'h2,h2c'
+        body: '{"data":{"id":"1059","conversationId":"user_000_user_user_001","sender":"user_000","receiverType":"user","receiver":"user_001","category":"message","type":"text","data":{"text":"Hi Tom!","entities":{"sender":{"entity":{"uid":"user_000","name":"user_000","status":"offline","role":"default","createdAt":1694804472},"entityType":"user"},"receiver":{"entity":{"uid":"user_001","name":"user_001","status":"offline","role":"default","createdAt":1694804473,"conversationId":"user_000_user_user_001"},"entityType":"user"}}},"sentAt":1694804476,"updatedAt":1694804476}}'
+        curl_info:
+            url: 'https://244134adc586447f.api-us.cometchat.io/v3/messages'
+            content_type: application/json
+            http_code: 200
+            header_size: 769
+            request_size: 357
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 1.561826
+            namelookup_time: 0.002325
+            connect_time: 0.238741
+            pretransfer_time: 0.732448
+            size_upload: 106.0
+            size_download: 561.0
+            speed_download: 359.0
+            speed_upload: 67.0
+            download_content_length: 561.0
+            upload_content_length: 106.0
+            starttransfer_time: 1.561798
+            redirect_time: 0.0
+            redirect_url: ''
+            primary_ip: 3.141.182.110
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 192.168.15.243
+            local_port: 61346
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 732190
+            connect_time_us: 238741
+            namelookup_time_us: 2325
+            pretransfer_time_us: 732448
+            redirect_time_us: 0
+            starttransfer_time_us: 1561798
+            total_time_us: 1561826
+    index: 0
+-
+    request:
+        method: GET
+        url: 'https://244134adc586447f.api-us.cometchat.io/v3/users/user_001/conversation'
+        headers:
+            Host: 244134adc586447f.api-us.cometchat.io
+            Expect: ''
+            Accept-Encoding: ''
+            User-Agent: GuzzleHttp/7
+            accept: application/json
+            apikey: 4c3e5b5a96da90cc4bb3f3013d22e72aaea802c9
+            content-type: application/json
+            onBehalfOf: user_000
+        body: '[]'
+    response:
+        status:
+            code: 200
+            message: OK
+        headers:
+            Date: 'Fri, 15 Sep 2023 19:01:17 GMT'
+            Content-Type: application/json
+            Content-Length: '873'
+            Connection: close
+            Server: ''
+            cache-control: 'must-revalidate, no-cache, private'
+            Vary: Accept-Encoding
+            Content-Encoding: none
+            X-RateLimit-Limit: '20000'
+            X-RateLimit-Remaining: '19995'
+            X-RateLimit-Limit-For-App: '100000'
+            X-RateLimit-Remaining-For-App: '99991'
+            Access-Control-Allow-Origin: '*'
+            Access-Control-Allow-Methods: 'OPTIONS,HEAD,GET,POST,PUT,PATCH,DELETE'
+            Access-Control-Allow-Headers: 'Content-Type,Accept,Cache-Control,Authorization,X-Requested-With,appId,apiKey,authToken,onBehalfOf,resource,Accept-Encoding,group,region,sdk,guid,uid,clientEnvironment,extensionId,username,password,callToken,onBehalfOfUser'
+            Accept: application/json
+            Upgrade: 'h2,h2c'
+        body: '{"data":{"conversationId":"user_000_user_user_001","conversationType":"user","unreadMessageCount":"0","createdAt":1694804476,"updatedAt":1694804476,"lastMessage":{"id":"1059","conversationId":"user_000_user_user_001","sender":"user_000","receiverType":"user","receiver":"user_001","category":"message","type":"text","data":{"text":"Hi Tom!","entities":{"sender":{"entity":{"uid":"user_000","name":"user_000","role":"default","status":"offline","createdAt":1694804472},"entityType":"user"},"receiver":{"entity":{"uid":"user_001","name":"user_001","role":"default","status":"offline","createdAt":1694804473,"conversationId":"user_000_user_user_001"},"entityType":"user"}}},"sentAt":1694804476,"updatedAt":1694804476},"conversationWith":{"uid":"user_001","name":"user_001","status":"offline","role":"default","createdAt":1694804473,"conversationId":"user_000_user_user_001"}}}'
+        curl_info:
+            url: 'https://244134adc586447f.api-us.cometchat.io/v3/users/user_001/conversation'
+            content_type: application/json
+            http_code: 200
+            header_size: 764
+            request_size: 269
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 1.071755
+            namelookup_time: 0.001719
+            connect_time: 0.238776
+            pretransfer_time: 0.738083
+            size_upload: 2.0
+            size_download: 873.0
+            speed_download: 814.0
+            speed_upload: 1.0
+            download_content_length: 873.0
+            upload_content_length: 2.0
+            starttransfer_time: 1.071569
+            redirect_time: 0.0
+            redirect_url: ''
+            primary_ip: 3.141.182.110
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 192.168.15.243
+            local_port: 61348
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 737713
+            connect_time_us: 238776
+            namelookup_time_us: 1719
+            pretransfer_time_us: 738083
+            redirect_time_us: 0
+            starttransfer_time_us: 1071569
+            total_time_us: 1071755
+    index: 0

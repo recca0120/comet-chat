@@ -52,4 +52,69 @@ class ConversationTest extends TestCase
 
         self::assertCount(1, $records);
     }
+
+    /**
+     * @throws ClientExceptionInterface
+     * @throws JsonException
+     */
+    public function test_get_user_conversation(): void
+    {
+        VCR::insertCassette('get_user_conversation.yaml');
+
+//        $this->givenUsers(2);
+//        $this->givenMessages(1, 'user_000', 'user_001');
+
+        self::assertEquals([
+            'conversationId' => 'user_000_user_user_001',
+            'conversationType' => 'user',
+            'unreadMessageCount' => '0',
+            'createdAt' => 1694804476,
+            'updatedAt' => 1694804476,
+            'lastMessage' => [
+                'id' => '1059',
+                'conversationId' => 'user_000_user_user_001',
+                'sender' => 'user_000',
+                'receiverType' => 'user',
+                'receiver' => 'user_001',
+                'category' => 'message',
+                'type' => 'text',
+                'data' => [
+                    'text' => 'Hi Tom!',
+                    'entities' => [
+                        'sender' => [
+                            'entity' => [
+                                'uid' => 'user_000',
+                                'name' => 'user_000',
+                                'role' => 'default',
+                                'status' => 'offline',
+                                'createdAt' => 1694804472,
+                            ],
+                            'entityType' => 'user',
+                        ],
+                        'receiver' => [
+                            'entity' => [
+                                'uid' => 'user_001',
+                                'name' => 'user_001',
+                                'role' => 'default',
+                                'status' => 'offline',
+                                'createdAt' => 1694804473,
+                                'conversationId' => 'user_000_user_user_001',
+                            ],
+                            'entityType' => 'user',
+                        ],
+                    ],
+                ],
+                'sentAt' => 1694804476,
+                'updatedAt' => 1694804476,
+            ],
+            'conversationWith' => [
+                'uid' => 'user_001',
+                'name' => 'user_001',
+                'status' => 'offline',
+                'role' => 'default',
+                'createdAt' => 1694804473,
+                'conversationId' => 'user_000_user_user_001',
+            ],
+        ], $this->conversation->getUserConversation('user_001', 'user_000'));
+    }
 }

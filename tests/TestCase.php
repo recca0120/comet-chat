@@ -50,7 +50,7 @@ abstract class TestCase extends BaseTestCase
             try {
                 $uid = 'user_'.str_pad((string) $i, 3, '0', STR_PAD_LEFT);
                 $result[] = $user->create(uid: $uid, name: $uid, withAuthToken: true);
-                usleep(100);
+                usleep(50);
             } catch (\Exception $e) {
                 var_dump($e->getMessage());
                 exit;
@@ -64,7 +64,7 @@ abstract class TestCase extends BaseTestCase
      * @throws ClientExceptionInterface
      * @throws JsonException
      */
-    protected function givenMessages(int $count): array
+    protected function givenMessages(int $count, string $sender = 'user_000', string $receiver = 'user_001'): array
     {
         $message = $this->client->message();
         foreach ($message->all() as $paginator) {
@@ -76,9 +76,8 @@ abstract class TestCase extends BaseTestCase
         $result = [];
         for ($i = 0; $i < $count; $i++) {
             try {
-                $uid = 'message_'.str_pad((string) $i, 3, '0', STR_PAD_LEFT);
-                $result = $message->send(receiver: $uid, data: ['text' => 'Hi Tom!'], onBehalfOf: 'conversation_001');
-                usleep(100);
+                $result = $message->send(receiver: $receiver, data: ['text' => 'Hi Tom!'], onBehalfOf: $sender);
+                usleep(50);
             } catch (\Exception $e) {
                 var_dump($e->getMessage());
             }
