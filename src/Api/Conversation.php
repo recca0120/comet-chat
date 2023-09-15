@@ -58,4 +58,22 @@ class Conversation extends Base
             'onBehalfOf' => $onBehalfOf,
         ], ['tags' => $tags]);
     }
+
+    /**
+     * @throws ClientExceptionInterface
+     * @throws JsonException
+     */
+    public function resetUserConversation(
+        string $uid,
+        string $onBehalfOf,
+        ?string $conversationWith = null,
+        ?bool $deleteMessagesPermanently = null
+    ): array {
+        return $this->sendRequest('DELETE', 'users/'.$uid.'/conversation', [
+            'onBehalfOf' => $onBehalfOf,
+        ], [
+            'conversationWith' => $conversationWith,
+            'deleteMessagesPermanently' => $deleteMessagesPermanently,
+        ]);
+    }
 }

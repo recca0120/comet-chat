@@ -130,7 +130,7 @@ class ConversationTest extends TestCase
      */
     public function test_update_user_conversation(): void
     {
-        VCR::insertCassette('udpate_user_conversation.yaml');
+        VCR::insertCassette('update_user_conversation.yaml');
 
 //        $this->givenUsers(2);
 //        $this->givenMessages(1, 'user_000', 'user_001');
@@ -188,5 +188,26 @@ class ConversationTest extends TestCase
             ],
             'tags' => ['sent'],
         ], $this->conversation->updateUserConversation('user_001', 'user_000', ['sent']));
+    }
+
+    /**
+     * @throws ClientExceptionInterface
+     * @throws JsonException
+     */
+    public function test_reset_user_conversation(): void
+    {
+        VCR::insertCassette('reset_user_conversation.yaml');
+
+//        $this->givenUsers(2);
+//        $this->givenMessages(1, 'user_000', 'user_001');
+
+        self::assertEquals([
+            'success' => true,
+            'message' => 'The conversation user_000_user_user_001 has been deleted successfully for UID user_000.',
+        ], $this->conversation->resetUserConversation(
+            uid: 'user_001',
+            onBehalfOf: 'user_000',
+            deleteMessagesPermanently: true
+        ));
     }
 }
