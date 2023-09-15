@@ -11,66 +11,67 @@
             accept: application/json
             apikey: 4c3e5b5a96da90cc4bb3f3013d22e72aaea802c9
             content-type: application/json
-        body: '{"receiver":"uuid_999","receiverType":"user","category":"message","type":"text","data":{"text":"Hi Tom!"}}'
+            onBehalfOf: user_000
+        body: '{"receiver":"user_001","receiverType":"user","category":"message","type":"text","data":{"text":"Hi Tom!"}}'
     response:
         status:
             code: 200
             message: OK
         headers:
-            Date: 'Tue, 05 Sep 2023 05:49:39 GMT'
+            Date: 'Fri, 15 Sep 2023 20:04:48 GMT'
             Content-Type: application/json
-            Content-Length: '499'
+            Content-Length: '561'
             Connection: keep-alive
-            Server: 'Apache/2.4.54 () OpenSSL/1.0.2k-fips'
+            Server: ''
             cache-control: 'must-revalidate, no-cache, private'
             Vary: Accept-Encoding
             Content-Encoding: none
             X-RateLimit-Limit: '20000'
-            X-RateLimit-Remaining: '19999'
+            X-RateLimit-Remaining: '19997'
             X-RateLimit-Limit-For-App: '100000'
-            X-RateLimit-Remaining-For-App: '99999'
+            X-RateLimit-Remaining-For-App: '99993'
             Access-Control-Allow-Origin: '*'
             Access-Control-Allow-Methods: 'OPTIONS,HEAD,GET,POST,PUT,PATCH,DELETE'
-            Access-Control-Allow-Headers: 'Content-Type,Accept,Cache-Control,Authorization,X-Requested-With,appId,apiKey,authToken,onBehalfOf,resource,Accept-Encoding,group,region,sdk,guid,uid,clientEnvironment,extensionId,username,password,callToken'
+            Access-Control-Allow-Headers: 'Content-Type,Accept,Cache-Control,Authorization,X-Requested-With,appId,apiKey,authToken,onBehalfOf,resource,Accept-Encoding,group,region,sdk,guid,uid,clientEnvironment,extensionId,username,password,callToken,onBehalfOfUser'
             Accept: application/json
             Upgrade: 'h2,h2c'
-        body: '{"data":{"id":"356","conversationId":"app_system_user_uuid_999","sender":"app_system","receiverType":"user","receiver":"uuid_999","category":"message","type":"text","data":{"text":"Hi Tom!","entities":{"sender":{"entity":{"uid":"app_system","name":"System","status":"offline","role":"default"},"entityType":"user"},"receiver":{"entity":{"uid":"uuid_999","name":"uuid_999","status":"offline","role":"default","createdAt":1693890496},"entityType":"user"}}},"sentAt":1693892979,"updatedAt":1693892979}}'
+        body: '{"data":{"id":"2144","conversationId":"user_000_user_user_001","sender":"user_000","receiverType":"user","receiver":"user_001","category":"message","type":"text","data":{"text":"Hi Tom!","entities":{"sender":{"entity":{"uid":"user_000","name":"user_000","status":"offline","role":"default","createdAt":1694808268},"entityType":"user"},"receiver":{"entity":{"uid":"user_001","name":"user_001","status":"offline","role":"default","createdAt":1694808269,"conversationId":"user_000_user_user_001"},"entityType":"user"}}},"sentAt":1694808288,"updatedAt":1694808288}}'
         curl_info:
             url: 'https://244134adc586447f.api-us.cometchat.io/v3/messages'
             content_type: application/json
             http_code: 200
-            header_size: 790
-            request_size: 335
+            header_size: 769
+            request_size: 357
             filetime: -1
             ssl_verify_result: 0
             redirect_count: 0
-            total_time: 1.275047
-            namelookup_time: 0.151906
-            connect_time: 0.185291
-            pretransfer_time: 0.876967
+            total_time: 1.616928
+            namelookup_time: 0.002228
+            connect_time: 0.248682
+            pretransfer_time: 0.829706
             size_upload: 106.0
-            size_download: 499.0
-            speed_download: 391.0
-            speed_upload: 83.0
-            download_content_length: 499.0
+            size_download: 561.0
+            speed_download: 346.0
+            speed_upload: 65.0
+            download_content_length: 561.0
             upload_content_length: 106.0
-            starttransfer_time: 1.275003
+            starttransfer_time: 1.616875
             redirect_time: 0.0
             redirect_url: ''
-            primary_ip: 3.128.187.224
+            primary_ip: 18.218.180.174
             certinfo: {  }
             primary_port: 443
-            local_ip: 10.14.0.2
-            local_port: 52917
+            local_ip: 192.168.15.243
+            local_port: 65033
             http_version: 2
             protocol: 2
             ssl_verifyresult: 0
             scheme: HTTPS
-            appconnect_time_us: 876767
-            connect_time_us: 185291
-            namelookup_time_us: 151906
-            pretransfer_time_us: 876967
+            appconnect_time_us: 829355
+            connect_time_us: 248682
+            namelookup_time_us: 2228
+            pretransfer_time_us: 829706
             redirect_time_us: 0
-            starttransfer_time_us: 1275003
-            total_time_us: 1275047
+            starttransfer_time_us: 1616875
+            total_time_us: 1616928
     index: 0

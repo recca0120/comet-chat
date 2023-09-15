@@ -2,6 +2,7 @@
 
 namespace Recca0120\CometChat\Tests;
 
+use Exception;
 use GuzzleHttp\Client as GuzzleClient;
 use JsonException;
 use PHPUnit\Framework\TestCase as BaseTestCase;
@@ -50,7 +51,7 @@ abstract class TestCase extends BaseTestCase
             try {
                 $uid = 'user_'.str_pad((string) $i, 3, '0', STR_PAD_LEFT);
                 $result[] = $user->create(uid: $uid, name: $uid, withAuthToken: true);
-                usleep(50);
+                usleep(100);
             } catch (\Exception $e) {
                 var_dump($e->getMessage());
                 exit;
@@ -69,7 +70,10 @@ abstract class TestCase extends BaseTestCase
         $message = $this->client->message();
         foreach ($message->all() as $paginator) {
             foreach ($paginator as $record) {
-                $message->delete($record['id'], permanent: true);
+                try {
+                    $message->delete($record['id'], permanent: true);
+                } catch (Exception $e) {
+                }
             }
         }
 
@@ -77,7 +81,7 @@ abstract class TestCase extends BaseTestCase
         for ($i = 0; $i < $count; $i++) {
             try {
                 $result = $message->send(receiver: $receiver, data: ['text' => 'Hi Tom!'], onBehalfOf: $sender);
-                usleep(50);
+                usleep(100);
             } catch (\Exception $e) {
                 var_dump($e->getMessage());
             }

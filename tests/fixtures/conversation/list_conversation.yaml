@@ -1,4 +1,6 @@
--   request:
+
+-
+    request:
         method: GET
         url: 'https://244134adc586447f.api-us.cometchat.io/v3/conversations?unread=1&perPage=5&page=1'
         headers:
@@ -15,11 +17,11 @@
             code: 200
             message: OK
         headers:
-            Date: 'Wed, 06 Sep 2023 00:08:40 GMT'
+            Date: 'Fri, 15 Sep 2023 19:55:29 GMT'
             Content-Type: application/json
-            Content-Length: '4897'
+            Content-Length: '1466'
             Connection: close
-            Server: 'Apache/2.4.54 () OpenSSL/1.0.2k-fips'
+            Server: ''
             cache-control: 'must-revalidate, no-cache, private'
             Vary: Accept-Encoding
             Content-Encoding: none
@@ -29,50 +31,50 @@
             X-RateLimit-Remaining-For-App: '99999'
             Access-Control-Allow-Origin: '*'
             Access-Control-Allow-Methods: 'OPTIONS,HEAD,GET,POST,PUT,PATCH,DELETE'
-            Access-Control-Allow-Headers: 'Content-Type,Accept,Cache-Control,Authorization,X-Requested-With,appId,apiKey,authToken,onBehalfOf,resource,Accept-Encoding,group,region,sdk,guid,uid,clientEnvironment,extensionId,username,password,callToken'
+            Access-Control-Allow-Headers: 'Content-Type,Accept,Cache-Control,Authorization,X-Requested-With,appId,apiKey,authToken,onBehalfOf,resource,Accept-Encoding,group,region,sdk,guid,uid,clientEnvironment,extensionId,username,password,callToken,onBehalfOfUser'
             Accept: application/json
-            Upgrade: 'h2,h2c'
-        body: '{"data":[{"conversationId":"conversation_001_user_conversation_002","conversationType":"user","unreadMessageCount":"3","createdAt":1693899072,"updatedAt":1693907393,"uid":"conversation_001","lastMessage":{"id":"857","conversationId":"conversation_001_user_conversation_002","sender":"conversation_002","receiverType":"user","receiver":"conversation_001","category":"message","type":"text","data":{"text":"Hi Tom!","entities":{"sender":{"entity":{"uid":"conversation_002","name":"conversation_002","role":"default","status":"offline","createdAt":1693899022},"entityType":"user"},"receiver":{"entity":{"uid":"conversation_001","name":"conversation_001","role":"default","status":"offline","createdAt":1693899021,"conversationId":"conversation_001_user_conversation_002"},"entityType":"user"}}},"sentAt":1693907393,"updatedAt":1693907393},"conversationWith":{"uid":"conversation_002","name":"conversation_002","status":"offline","role":"default","createdAt":1693899022}},{"conversationId":"conversation_001_user_conversation_002","conversationType":"user","unreadMessageCount":"11","createdAt":1693899072,"updatedAt":1693907393,"uid":"conversation_002","lastMessage":{"id":"857","conversationId":"conversation_001_user_conversation_002","sender":"conversation_002","receiverType":"user","receiver":"conversation_001","category":"message","type":"text","data":{"text":"Hi Tom!","entities":{"sender":{"entity":{"uid":"conversation_002","name":"conversation_002","role":"default","status":"offline","createdAt":1693899022},"entityType":"user"},"receiver":{"entity":{"uid":"conversation_001","name":"conversation_001","role":"default","status":"offline","createdAt":1693899021,"conversationId":"conversation_001_user_conversation_002"},"entityType":"user"}}},"sentAt":1693907393,"updatedAt":1693907393},"conversationWith":{"uid":"conversation_001","name":"conversation_001","status":"offline","role":"default","createdAt":1693899021}},{"conversationId":"conversation_001_user_conversation_003","conversationType":"user","unreadMessageCount":"2","createdAt":1693899073,"updatedAt":1693899172,"uid":"conversation_003","lastMessage":{"id":"824","conversationId":"conversation_001_user_conversation_003","sender":"conversation_001","receiverType":"user","receiver":"conversation_003","category":"message","type":"text","data":{"text":"Hi Tom!","entities":{"sender":{"entity":{"uid":"conversation_001","name":"conversation_001","role":"default","status":"offline","createdAt":1693899021},"entityType":"user"},"receiver":{"entity":{"uid":"conversation_003","name":"conversation_003","role":"default","status":"offline","createdAt":1693899023,"conversationId":"conversation_001_user_conversation_003"},"entityType":"user"}}},"sentAt":1693899172,"updatedAt":1693899172},"conversationWith":{"uid":"conversation_001","name":"conversation_001","status":"offline","role":"default","createdAt":1693899021}},{"conversationId":"conversation_001_user_conversation_004","conversationType":"user","unreadMessageCount":"2","createdAt":1693899074,"updatedAt":1693899173,"uid":"conversation_004","lastMessage":{"id":"825","conversationId":"conversation_001_user_conversation_004","sender":"conversation_001","receiverType":"user","receiver":"conversation_004","category":"message","type":"text","data":{"text":"Hi Tom!","entities":{"sender":{"entity":{"uid":"conversation_001","name":"conversation_001","role":"default","status":"offline","createdAt":1693899021},"entityType":"user"},"receiver":{"entity":{"uid":"conversation_004","name":"conversation_004","role":"default","status":"offline","createdAt":1693899024,"conversationId":"conversation_001_user_conversation_004"},"entityType":"user"}}},"sentAt":1693899173,"updatedAt":1693899173},"conversationWith":{"uid":"conversation_001","name":"conversation_001","status":"offline","role":"default","createdAt":1693899021}},{"conversationId":"conversation_001_user_conversation_005","conversationType":"user","unreadMessageCount":"2","createdAt":1693899075,"updatedAt":1693899174,"uid":"conversation_005","lastMessage":{"id":"826","conversationId":"conversation_001_user_conversation_005","sender":"conversation_001","receiverType":"user","receiver":"conversation_005","category":"message","type":"text","data":{"text":"Hi Tom!","entities":{"sender":{"entity":{"uid":"conversation_001","name":"conversation_001","role":"default","status":"offline","createdAt":1693899021},"entityType":"user"},"receiver":{"entity":{"uid":"conversation_005","name":"conversation_005","role":"default","status":"offline","createdAt":1693899026,"conversationId":"conversation_001_user_conversation_005"},"entityType":"user"}}},"sentAt":1693899174,"updatedAt":1693899174},"conversationWith":{"uid":"conversation_001","name":"conversation_001","status":"offline","role":"default","createdAt":1693899021}}],"meta":{"pagination":{"total":24,"count":5,"per_page":5,"current_page":1,"total_pages":5}}}'
+        body: '{"data":[{"conversationId":"user_000_user_user_001","conversationType":"user","unreadMessageCount":"1","createdAt":1694807488,"updatedAt":1694807488,"uid":"user_001","conversationWith":{"uid":"user_000","name":"user_000","status":"offline","role":"default","createdAt":1694807456}},{"conversationId":"user_000_user_user_002","conversationType":"user","unreadMessageCount":"1","createdAt":1694807493,"updatedAt":1694807493,"uid":"user_002","conversationWith":{"uid":"user_000","name":"user_000","status":"offline","role":"default","createdAt":1694807456}},{"conversationId":"user_000_user_user_003","conversationType":"user","unreadMessageCount":"1","createdAt":1694807498,"updatedAt":1694807498,"uid":"user_003","conversationWith":{"uid":"user_000","name":"user_000","status":"offline","role":"default","createdAt":1694807456}},{"conversationId":"user_000_user_user_004","conversationType":"user","unreadMessageCount":"1","createdAt":1694807504,"updatedAt":1694807504,"uid":"user_004","conversationWith":{"uid":"user_000","name":"user_000","status":"offline","role":"default","createdAt":1694807456}},{"conversationId":"user_000_user_user_005","conversationType":"user","unreadMessageCount":"1","createdAt":1694807510,"updatedAt":1694807510,"uid":"user_005","conversationWith":{"uid":"user_000","name":"user_000","status":"offline","role":"default","createdAt":1694807456}}],"meta":{"pagination":{"total":24,"count":5,"per_page":5,"current_page":1,"total_pages":5}}}'
         curl_info:
             url: 'https://244134adc586447f.api-us.cometchat.io/v3/conversations?unread=1&perPage=5&page=1'
             content_type: application/json
             http_code: 200
-            header_size: 786
+            header_size: 748
             request_size: 259
             filetime: -1
             ssl_verify_result: 0
             redirect_count: 0
-            total_time: 1.274995
-            namelookup_time: 0.29602
-            connect_time: 0.528496
-            pretransfer_time: 0.991669
+            total_time: 1.06769
+            namelookup_time: 0.002261
+            connect_time: 0.241151
+            pretransfer_time: 0.792619
             size_upload: 2.0
-            size_download: 4897.0
-            speed_download: 3840.0
+            size_download: 1466.0
+            speed_download: 1373.0
             speed_upload: 1.0
-            download_content_length: 4897.0
+            download_content_length: 1466.0
             upload_content_length: 2.0
-            starttransfer_time: 1.274917
+            starttransfer_time: 1.06766
             redirect_time: 0.0
             redirect_url: ''
-            primary_ip: 3.128.187.224
-            certinfo: { }
+            primary_ip: 18.218.180.174
+            certinfo: {  }
             primary_port: 443
             local_ip: 192.168.15.243
-            local_port: 51643
+            local_port: 64547
             http_version: 2
             protocol: 2
             ssl_verifyresult: 0
             scheme: HTTPS
-            appconnect_time_us: 991089
-            connect_time_us: 528496
-            namelookup_time_us: 296020
-            pretransfer_time_us: 991669
+            appconnect_time_us: 792363
+            connect_time_us: 241151
+            namelookup_time_us: 2261
+            pretransfer_time_us: 792619
             redirect_time_us: 0
-            starttransfer_time_us: 1274917
-            total_time_us: 1274995
+            starttransfer_time_us: 1067660
+            total_time_us: 1067690
     index: 0
--   request:
+-
+    request:
         method: GET
         url: 'https://244134adc586447f.api-us.cometchat.io/v3/conversations?unread=1&perPage=5&page=2'
         headers:
@@ -89,11 +91,11 @@
             code: 200
             message: OK
         headers:
-            Date: 'Wed, 06 Sep 2023 00:08:41 GMT'
+            Date: 'Fri, 15 Sep 2023 19:55:30 GMT'
             Content-Type: application/json
-            Content-Length: '4896'
+            Content-Length: '1466'
             Connection: close
-            Server: 'Apache/2.4.54 () OpenSSL/1.0.2k-fips'
+            Server: ''
             cache-control: 'must-revalidate, no-cache, private'
             Vary: Accept-Encoding
             Content-Encoding: none
@@ -103,50 +105,51 @@
             X-RateLimit-Remaining-For-App: '99998'
             Access-Control-Allow-Origin: '*'
             Access-Control-Allow-Methods: 'OPTIONS,HEAD,GET,POST,PUT,PATCH,DELETE'
-            Access-Control-Allow-Headers: 'Content-Type,Accept,Cache-Control,Authorization,X-Requested-With,appId,apiKey,authToken,onBehalfOf,resource,Accept-Encoding,group,region,sdk,guid,uid,clientEnvironment,extensionId,username,password,callToken'
+            Access-Control-Allow-Headers: 'Content-Type,Accept,Cache-Control,Authorization,X-Requested-With,appId,apiKey,authToken,onBehalfOf,resource,Accept-Encoding,group,region,sdk,guid,uid,clientEnvironment,extensionId,username,password,callToken,onBehalfOfUser'
             Accept: application/json
             Upgrade: 'h2,h2c'
-        body: '{"data":[{"conversationId":"conversation_001_user_conversation_006","conversationType":"user","unreadMessageCount":"2","createdAt":1693899077,"updatedAt":1693899175,"uid":"conversation_006","lastMessage":{"id":"827","conversationId":"conversation_001_user_conversation_006","sender":"conversation_001","receiverType":"user","receiver":"conversation_006","category":"message","type":"text","data":{"text":"Hi Tom!","entities":{"sender":{"entity":{"uid":"conversation_001","name":"conversation_001","role":"default","status":"offline","createdAt":1693899021},"entityType":"user"},"receiver":{"entity":{"uid":"conversation_006","name":"conversation_006","role":"default","status":"offline","createdAt":1693899027,"conversationId":"conversation_001_user_conversation_006"},"entityType":"user"}}},"sentAt":1693899175,"updatedAt":1693899175},"conversationWith":{"uid":"conversation_001","name":"conversation_001","status":"offline","role":"default","createdAt":1693899021}},{"conversationId":"conversation_001_user_conversation_007","conversationType":"user","unreadMessageCount":"2","createdAt":1693899078,"updatedAt":1693899177,"uid":"conversation_007","lastMessage":{"id":"828","conversationId":"conversation_001_user_conversation_007","sender":"conversation_001","receiverType":"user","receiver":"conversation_007","category":"message","type":"text","data":{"text":"Hi Tom!","entities":{"sender":{"entity":{"uid":"conversation_001","name":"conversation_001","role":"default","status":"offline","createdAt":1693899021},"entityType":"user"},"receiver":{"entity":{"uid":"conversation_007","name":"conversation_007","role":"default","status":"offline","createdAt":1693899028,"conversationId":"conversation_001_user_conversation_007"},"entityType":"user"}}},"sentAt":1693899177,"updatedAt":1693899177},"conversationWith":{"uid":"conversation_001","name":"conversation_001","status":"offline","role":"default","createdAt":1693899021}},{"conversationId":"conversation_001_user_conversation_008","conversationType":"user","unreadMessageCount":"2","createdAt":1693899079,"updatedAt":1693899178,"uid":"conversation_008","lastMessage":{"id":"829","conversationId":"conversation_001_user_conversation_008","sender":"conversation_001","receiverType":"user","receiver":"conversation_008","category":"message","type":"text","data":{"text":"Hi Tom!","entities":{"sender":{"entity":{"uid":"conversation_001","name":"conversation_001","role":"default","status":"offline","createdAt":1693899021},"entityType":"user"},"receiver":{"entity":{"uid":"conversation_008","name":"conversation_008","role":"default","status":"offline","createdAt":1693899029,"conversationId":"conversation_001_user_conversation_008"},"entityType":"user"}}},"sentAt":1693899178,"updatedAt":1693899178},"conversationWith":{"uid":"conversation_001","name":"conversation_001","status":"offline","role":"default","createdAt":1693899021}},{"conversationId":"conversation_001_user_conversation_009","conversationType":"user","unreadMessageCount":"2","createdAt":1693899080,"updatedAt":1693899179,"uid":"conversation_009","lastMessage":{"id":"830","conversationId":"conversation_001_user_conversation_009","sender":"conversation_001","receiverType":"user","receiver":"conversation_009","category":"message","type":"text","data":{"text":"Hi Tom!","entities":{"sender":{"entity":{"uid":"conversation_001","name":"conversation_001","role":"default","status":"offline","createdAt":1693899021},"entityType":"user"},"receiver":{"entity":{"uid":"conversation_009","name":"conversation_009","role":"default","status":"offline","createdAt":1693899030,"conversationId":"conversation_001_user_conversation_009"},"entityType":"user"}}},"sentAt":1693899179,"updatedAt":1693899179},"conversationWith":{"uid":"conversation_001","name":"conversation_001","status":"offline","role":"default","createdAt":1693899021}},{"conversationId":"conversation_001_user_conversation_010","conversationType":"user","unreadMessageCount":"2","createdAt":1693899081,"updatedAt":1693899180,"uid":"conversation_010","lastMessage":{"id":"831","conversationId":"conversation_001_user_conversation_010","sender":"conversation_001","receiverType":"user","receiver":"conversation_010","category":"message","type":"text","data":{"text":"Hi Tom!","entities":{"sender":{"entity":{"uid":"conversation_001","name":"conversation_001","role":"default","status":"offline","createdAt":1693899021},"entityType":"user"},"receiver":{"entity":{"uid":"conversation_010","name":"conversation_010","role":"default","status":"offline","createdAt":1693899031,"conversationId":"conversation_001_user_conversation_010"},"entityType":"user"}}},"sentAt":1693899180,"updatedAt":1693899180},"conversationWith":{"uid":"conversation_001","name":"conversation_001","status":"offline","role":"default","createdAt":1693899021}}],"meta":{"pagination":{"total":24,"count":5,"per_page":5,"current_page":2,"total_pages":5}}}'
+        body: '{"data":[{"conversationId":"user_000_user_user_006","conversationType":"user","unreadMessageCount":"1","createdAt":1694807515,"updatedAt":1694807515,"uid":"user_006","conversationWith":{"uid":"user_000","name":"user_000","status":"offline","role":"default","createdAt":1694807456}},{"conversationId":"user_000_user_user_007","conversationType":"user","unreadMessageCount":"1","createdAt":1694807521,"updatedAt":1694807521,"uid":"user_007","conversationWith":{"uid":"user_000","name":"user_000","status":"offline","role":"default","createdAt":1694807456}},{"conversationId":"user_000_user_user_008","conversationType":"user","unreadMessageCount":"1","createdAt":1694807526,"updatedAt":1694807526,"uid":"user_008","conversationWith":{"uid":"user_000","name":"user_000","status":"offline","role":"default","createdAt":1694807456}},{"conversationId":"user_000_user_user_009","conversationType":"user","unreadMessageCount":"1","createdAt":1694807532,"updatedAt":1694807532,"uid":"user_009","conversationWith":{"uid":"user_000","name":"user_000","status":"offline","role":"default","createdAt":1694807456}},{"conversationId":"user_000_user_user_010","conversationType":"user","unreadMessageCount":"1","createdAt":1694807537,"updatedAt":1694807537,"uid":"user_010","conversationWith":{"uid":"user_000","name":"user_000","status":"offline","role":"default","createdAt":1694807456}}],"meta":{"pagination":{"total":24,"count":5,"per_page":5,"current_page":2,"total_pages":5}}}'
         curl_info:
             url: 'https://244134adc586447f.api-us.cometchat.io/v3/conversations?unread=1&perPage=5&page=2'
             content_type: application/json
             http_code: 200
-            header_size: 786
+            header_size: 765
             request_size: 259
             filetime: -1
             ssl_verify_result: 0
             redirect_count: 0
-            total_time: 1.076402
-            namelookup_time: 0.001852
-            connect_time: 0.23506
-            pretransfer_time: 0.692268
+            total_time: 1.207222
+            namelookup_time: 0.004546
+            connect_time: 0.290925
+            pretransfer_time: 0.89913
             size_upload: 2.0
-            size_download: 4896.0
-            speed_download: 4548.0
+            size_download: 1466.0
+            speed_download: 1214.0
             speed_upload: 1.0
-            download_content_length: 4896.0
+            download_content_length: 1466.0
             upload_content_length: 2.0
-            starttransfer_time: 1.076343
+            starttransfer_time: 1.207185
             redirect_time: 0.0
             redirect_url: ''
-            primary_ip: 3.128.187.224
-            certinfo: { }
+            primary_ip: 3.141.182.110
+            certinfo: {  }
             primary_port: 443
             local_ip: 192.168.15.243
-            local_port: 51644
+            local_port: 64548
             http_version: 2
             protocol: 2
             ssl_verifyresult: 0
             scheme: HTTPS
-            appconnect_time_us: 691808
-            connect_time_us: 235060
-            namelookup_time_us: 1852
-            pretransfer_time_us: 692268
+            appconnect_time_us: 899005
+            connect_time_us: 290925
+            namelookup_time_us: 4546
+            pretransfer_time_us: 899130
             redirect_time_us: 0
-            starttransfer_time_us: 1076343
-            total_time_us: 1076402
+            starttransfer_time_us: 1207185
+            total_time_us: 1207222
     index: 0
--   request:
+-
+    request:
         method: GET
         url: 'https://244134adc586447f.api-us.cometchat.io/v3/conversations?unread=1&perPage=5&page=3'
         headers:
@@ -163,11 +166,11 @@
             code: 200
             message: OK
         headers:
-            Date: 'Wed, 06 Sep 2023 00:08:42 GMT'
+            Date: 'Fri, 15 Sep 2023 19:55:32 GMT'
             Content-Type: application/json
-            Content-Length: '4896'
+            Content-Length: '1466'
             Connection: close
-            Server: 'Apache/2.4.54 () OpenSSL/1.0.2k-fips'
+            Server: ''
             cache-control: 'must-revalidate, no-cache, private'
             Vary: Accept-Encoding
             Content-Encoding: none
@@ -177,50 +180,51 @@
             X-RateLimit-Remaining-For-App: '99997'
             Access-Control-Allow-Origin: '*'
             Access-Control-Allow-Methods: 'OPTIONS,HEAD,GET,POST,PUT,PATCH,DELETE'
-            Access-Control-Allow-Headers: 'Content-Type,Accept,Cache-Control,Authorization,X-Requested-With,appId,apiKey,authToken,onBehalfOf,resource,Accept-Encoding,group,region,sdk,guid,uid,clientEnvironment,extensionId,username,password,callToken'
+            Access-Control-Allow-Headers: 'Content-Type,Accept,Cache-Control,Authorization,X-Requested-With,appId,apiKey,authToken,onBehalfOf,resource,Accept-Encoding,group,region,sdk,guid,uid,clientEnvironment,extensionId,username,password,callToken,onBehalfOfUser'
             Accept: application/json
             Upgrade: 'h2,h2c'
-        body: '{"data":[{"conversationId":"conversation_001_user_conversation_011","conversationType":"user","unreadMessageCount":"2","createdAt":1693899082,"updatedAt":1693899181,"uid":"conversation_011","lastMessage":{"id":"832","conversationId":"conversation_001_user_conversation_011","sender":"conversation_001","receiverType":"user","receiver":"conversation_011","category":"message","type":"text","data":{"text":"Hi Tom!","entities":{"sender":{"entity":{"uid":"conversation_001","name":"conversation_001","role":"default","status":"offline","createdAt":1693899021},"entityType":"user"},"receiver":{"entity":{"uid":"conversation_011","name":"conversation_011","role":"default","status":"offline","createdAt":1693899032,"conversationId":"conversation_001_user_conversation_011"},"entityType":"user"}}},"sentAt":1693899181,"updatedAt":1693899181},"conversationWith":{"uid":"conversation_001","name":"conversation_001","status":"offline","role":"default","createdAt":1693899021}},{"conversationId":"conversation_001_user_conversation_012","conversationType":"user","unreadMessageCount":"2","createdAt":1693899083,"updatedAt":1693899182,"uid":"conversation_012","lastMessage":{"id":"833","conversationId":"conversation_001_user_conversation_012","sender":"conversation_001","receiverType":"user","receiver":"conversation_012","category":"message","type":"text","data":{"text":"Hi Tom!","entities":{"sender":{"entity":{"uid":"conversation_001","name":"conversation_001","role":"default","status":"offline","createdAt":1693899021},"entityType":"user"},"receiver":{"entity":{"uid":"conversation_012","name":"conversation_012","role":"default","status":"offline","createdAt":1693899033,"conversationId":"conversation_001_user_conversation_012"},"entityType":"user"}}},"sentAt":1693899182,"updatedAt":1693899182},"conversationWith":{"uid":"conversation_001","name":"conversation_001","status":"offline","role":"default","createdAt":1693899021}},{"conversationId":"conversation_001_user_conversation_013","conversationType":"user","unreadMessageCount":"2","createdAt":1693899084,"updatedAt":1693899183,"uid":"conversation_013","lastMessage":{"id":"834","conversationId":"conversation_001_user_conversation_013","sender":"conversation_001","receiverType":"user","receiver":"conversation_013","category":"message","type":"text","data":{"text":"Hi Tom!","entities":{"sender":{"entity":{"uid":"conversation_001","name":"conversation_001","role":"default","status":"offline","createdAt":1693899021},"entityType":"user"},"receiver":{"entity":{"uid":"conversation_013","name":"conversation_013","role":"default","status":"offline","createdAt":1693899034,"conversationId":"conversation_001_user_conversation_013"},"entityType":"user"}}},"sentAt":1693899183,"updatedAt":1693899183},"conversationWith":{"uid":"conversation_001","name":"conversation_001","status":"offline","role":"default","createdAt":1693899021}},{"conversationId":"conversation_001_user_conversation_014","conversationType":"user","unreadMessageCount":"2","createdAt":1693899085,"updatedAt":1693899184,"uid":"conversation_014","lastMessage":{"id":"835","conversationId":"conversation_001_user_conversation_014","sender":"conversation_001","receiverType":"user","receiver":"conversation_014","category":"message","type":"text","data":{"text":"Hi Tom!","entities":{"sender":{"entity":{"uid":"conversation_001","name":"conversation_001","role":"default","status":"offline","createdAt":1693899021},"entityType":"user"},"receiver":{"entity":{"uid":"conversation_014","name":"conversation_014","role":"default","status":"offline","createdAt":1693899035,"conversationId":"conversation_001_user_conversation_014"},"entityType":"user"}}},"sentAt":1693899184,"updatedAt":1693899184},"conversationWith":{"uid":"conversation_001","name":"conversation_001","status":"offline","role":"default","createdAt":1693899021}},{"conversationId":"conversation_001_user_conversation_015","conversationType":"user","unreadMessageCount":"2","createdAt":1693899087,"updatedAt":1693899185,"uid":"conversation_015","lastMessage":{"id":"836","conversationId":"conversation_001_user_conversation_015","sender":"conversation_001","receiverType":"user","receiver":"conversation_015","category":"message","type":"text","data":{"text":"Hi Tom!","entities":{"sender":{"entity":{"uid":"conversation_001","name":"conversation_001","role":"default","status":"offline","createdAt":1693899021},"entityType":"user"},"receiver":{"entity":{"uid":"conversation_015","name":"conversation_015","role":"default","status":"offline","createdAt":1693899036,"conversationId":"conversation_001_user_conversation_015"},"entityType":"user"}}},"sentAt":1693899185,"updatedAt":1693899185},"conversationWith":{"uid":"conversation_001","name":"conversation_001","status":"offline","role":"default","createdAt":1693899021}}],"meta":{"pagination":{"total":24,"count":5,"per_page":5,"current_page":3,"total_pages":5}}}'
+        body: '{"data":[{"conversationId":"user_000_user_user_011","conversationType":"user","unreadMessageCount":"1","createdAt":1694807543,"updatedAt":1694807543,"uid":"user_011","conversationWith":{"uid":"user_000","name":"user_000","status":"offline","role":"default","createdAt":1694807456}},{"conversationId":"user_000_user_user_012","conversationType":"user","unreadMessageCount":"1","createdAt":1694807583,"updatedAt":1694807583,"uid":"user_012","conversationWith":{"uid":"user_000","name":"user_000","status":"offline","role":"default","createdAt":1694807456}},{"conversationId":"user_000_user_user_013","conversationType":"user","unreadMessageCount":"1","createdAt":1694807589,"updatedAt":1694807589,"uid":"user_013","conversationWith":{"uid":"user_000","name":"user_000","status":"offline","role":"default","createdAt":1694807456}},{"conversationId":"user_000_user_user_014","conversationType":"user","unreadMessageCount":"1","createdAt":1694807630,"updatedAt":1694807630,"uid":"user_014","conversationWith":{"uid":"user_000","name":"user_000","status":"offline","role":"default","createdAt":1694807456}},{"conversationId":"user_000_user_user_015","conversationType":"user","unreadMessageCount":"1","createdAt":1694807635,"updatedAt":1694807635,"uid":"user_015","conversationWith":{"uid":"user_000","name":"user_000","status":"offline","role":"default","createdAt":1694807456}}],"meta":{"pagination":{"total":24,"count":5,"per_page":5,"current_page":3,"total_pages":5}}}'
         curl_info:
             url: 'https://244134adc586447f.api-us.cometchat.io/v3/conversations?unread=1&perPage=5&page=3'
             content_type: application/json
             http_code: 200
-            header_size: 786
+            header_size: 765
             request_size: 259
             filetime: -1
             ssl_verify_result: 0
             redirect_count: 0
-            total_time: 1.209951
-            namelookup_time: 0.002601
-            connect_time: 0.226992
-            pretransfer_time: 0.798681
+            total_time: 1.130712
+            namelookup_time: 0.002083
+            connect_time: 0.299615
+            pretransfer_time: 0.816637
             size_upload: 2.0
-            size_download: 4896.0
-            speed_download: 4046.0
+            size_download: 1466.0
+            speed_download: 1296.0
             speed_upload: 1.0
-            download_content_length: 4896.0
+            download_content_length: 1466.0
             upload_content_length: 2.0
-            starttransfer_time: 1.209853
+            starttransfer_time: 1.130642
             redirect_time: 0.0
             redirect_url: ''
-            primary_ip: 18.223.197.243
-            certinfo: { }
+            primary_ip: 3.140.14.70
+            certinfo: {  }
             primary_port: 443
             local_ip: 192.168.15.243
-            local_port: 51646
+            local_port: 64550
             http_version: 2
             protocol: 2
             ssl_verifyresult: 0
             scheme: HTTPS
-            appconnect_time_us: 798649
-            connect_time_us: 226992
-            namelookup_time_us: 2601
-            pretransfer_time_us: 798681
+            appconnect_time_us: 816478
+            connect_time_us: 299615
+            namelookup_time_us: 2083
+            pretransfer_time_us: 816637
             redirect_time_us: 0
-            starttransfer_time_us: 1209853
-            total_time_us: 1209951
+            starttransfer_time_us: 1130642
+            total_time_us: 1130712
     index: 0
--   request:
+-
+    request:
         method: GET
         url: 'https://244134adc586447f.api-us.cometchat.io/v3/conversations?unread=1&perPage=5&page=4'
         headers:
@@ -237,11 +241,11 @@
             code: 200
             message: OK
         headers:
-            Date: 'Wed, 06 Sep 2023 00:08:43 GMT'
+            Date: 'Fri, 15 Sep 2023 19:55:33 GMT'
             Content-Type: application/json
-            Content-Length: '4896'
+            Content-Length: '1466'
             Connection: close
-            Server: 'Apache/2.4.54 () OpenSSL/1.0.2k-fips'
+            Server: ''
             cache-control: 'must-revalidate, no-cache, private'
             Vary: Accept-Encoding
             Content-Encoding: none
@@ -251,50 +255,51 @@
             X-RateLimit-Remaining-For-App: '99996'
             Access-Control-Allow-Origin: '*'
             Access-Control-Allow-Methods: 'OPTIONS,HEAD,GET,POST,PUT,PATCH,DELETE'
-            Access-Control-Allow-Headers: 'Content-Type,Accept,Cache-Control,Authorization,X-Requested-With,appId,apiKey,authToken,onBehalfOf,resource,Accept-Encoding,group,region,sdk,guid,uid,clientEnvironment,extensionId,username,password,callToken'
+            Access-Control-Allow-Headers: 'Content-Type,Accept,Cache-Control,Authorization,X-Requested-With,appId,apiKey,authToken,onBehalfOf,resource,Accept-Encoding,group,region,sdk,guid,uid,clientEnvironment,extensionId,username,password,callToken,onBehalfOfUser'
             Accept: application/json
             Upgrade: 'h2,h2c'
-        body: '{"data":[{"conversationId":"conversation_001_user_conversation_016","conversationType":"user","unreadMessageCount":"2","createdAt":1693899088,"updatedAt":1693899186,"uid":"conversation_016","lastMessage":{"id":"837","conversationId":"conversation_001_user_conversation_016","sender":"conversation_001","receiverType":"user","receiver":"conversation_016","category":"message","type":"text","data":{"text":"Hi Tom!","entities":{"sender":{"entity":{"uid":"conversation_001","name":"conversation_001","role":"default","status":"offline","createdAt":1693899021},"entityType":"user"},"receiver":{"entity":{"uid":"conversation_016","name":"conversation_016","role":"default","status":"offline","createdAt":1693899037,"conversationId":"conversation_001_user_conversation_016"},"entityType":"user"}}},"sentAt":1693899186,"updatedAt":1693899186},"conversationWith":{"uid":"conversation_001","name":"conversation_001","status":"offline","role":"default","createdAt":1693899021}},{"conversationId":"conversation_001_user_conversation_017","conversationType":"user","unreadMessageCount":"2","createdAt":1693899089,"updatedAt":1693899188,"uid":"conversation_017","lastMessage":{"id":"838","conversationId":"conversation_001_user_conversation_017","sender":"conversation_001","receiverType":"user","receiver":"conversation_017","category":"message","type":"text","data":{"text":"Hi Tom!","entities":{"sender":{"entity":{"uid":"conversation_001","name":"conversation_001","role":"default","status":"offline","createdAt":1693899021},"entityType":"user"},"receiver":{"entity":{"uid":"conversation_017","name":"conversation_017","role":"default","status":"offline","createdAt":1693899038,"conversationId":"conversation_001_user_conversation_017"},"entityType":"user"}}},"sentAt":1693899188,"updatedAt":1693899188},"conversationWith":{"uid":"conversation_001","name":"conversation_001","status":"offline","role":"default","createdAt":1693899021}},{"conversationId":"conversation_001_user_conversation_018","conversationType":"user","unreadMessageCount":"2","createdAt":1693899090,"updatedAt":1693899189,"uid":"conversation_018","lastMessage":{"id":"839","conversationId":"conversation_001_user_conversation_018","sender":"conversation_001","receiverType":"user","receiver":"conversation_018","category":"message","type":"text","data":{"text":"Hi Tom!","entities":{"sender":{"entity":{"uid":"conversation_001","name":"conversation_001","role":"default","status":"offline","createdAt":1693899021},"entityType":"user"},"receiver":{"entity":{"uid":"conversation_018","name":"conversation_018","role":"default","status":"offline","createdAt":1693899039,"conversationId":"conversation_001_user_conversation_018"},"entityType":"user"}}},"sentAt":1693899189,"updatedAt":1693899189},"conversationWith":{"uid":"conversation_001","name":"conversation_001","status":"offline","role":"default","createdAt":1693899021}},{"conversationId":"conversation_001_user_conversation_019","conversationType":"user","unreadMessageCount":"2","createdAt":1693899091,"updatedAt":1693899190,"uid":"conversation_019","lastMessage":{"id":"840","conversationId":"conversation_001_user_conversation_019","sender":"conversation_001","receiverType":"user","receiver":"conversation_019","category":"message","type":"text","data":{"text":"Hi Tom!","entities":{"sender":{"entity":{"uid":"conversation_001","name":"conversation_001","role":"default","status":"offline","createdAt":1693899021},"entityType":"user"},"receiver":{"entity":{"uid":"conversation_019","name":"conversation_019","role":"default","status":"offline","createdAt":1693899040,"conversationId":"conversation_001_user_conversation_019"},"entityType":"user"}}},"sentAt":1693899190,"updatedAt":1693899190},"conversationWith":{"uid":"conversation_001","name":"conversation_001","status":"offline","role":"default","createdAt":1693899021}},{"conversationId":"conversation_001_user_conversation_020","conversationType":"user","unreadMessageCount":"2","createdAt":1693899092,"updatedAt":1693899191,"uid":"conversation_020","lastMessage":{"id":"841","conversationId":"conversation_001_user_conversation_020","sender":"conversation_001","receiverType":"user","receiver":"conversation_020","category":"message","type":"text","data":{"text":"Hi Tom!","entities":{"sender":{"entity":{"uid":"conversation_001","name":"conversation_001","role":"default","status":"offline","createdAt":1693899021},"entityType":"user"},"receiver":{"entity":{"uid":"conversation_020","name":"conversation_020","role":"default","status":"offline","createdAt":1693899042,"conversationId":"conversation_001_user_conversation_020"},"entityType":"user"}}},"sentAt":1693899191,"updatedAt":1693899191},"conversationWith":{"uid":"conversation_001","name":"conversation_001","status":"offline","role":"default","createdAt":1693899021}}],"meta":{"pagination":{"total":24,"count":5,"per_page":5,"current_page":4,"total_pages":5}}}'
+        body: '{"data":[{"conversationId":"user_000_user_user_016","conversationType":"user","unreadMessageCount":"1","createdAt":1694807641,"updatedAt":1694807641,"uid":"user_016","conversationWith":{"uid":"user_000","name":"user_000","status":"offline","role":"default","createdAt":1694807456}},{"conversationId":"user_000_user_user_017","conversationType":"user","unreadMessageCount":"1","createdAt":1694807646,"updatedAt":1694807646,"uid":"user_017","conversationWith":{"uid":"user_000","name":"user_000","status":"offline","role":"default","createdAt":1694807456}},{"conversationId":"user_000_user_user_018","conversationType":"user","unreadMessageCount":"1","createdAt":1694807652,"updatedAt":1694807652,"uid":"user_018","conversationWith":{"uid":"user_000","name":"user_000","status":"offline","role":"default","createdAt":1694807456}},{"conversationId":"user_000_user_user_019","conversationType":"user","unreadMessageCount":"1","createdAt":1694807657,"updatedAt":1694807657,"uid":"user_019","conversationWith":{"uid":"user_000","name":"user_000","status":"offline","role":"default","createdAt":1694807456}},{"conversationId":"user_000_user_user_020","conversationType":"user","unreadMessageCount":"1","createdAt":1694807663,"updatedAt":1694807663,"uid":"user_020","conversationWith":{"uid":"user_000","name":"user_000","status":"offline","role":"default","createdAt":1694807456}}],"meta":{"pagination":{"total":24,"count":5,"per_page":5,"current_page":4,"total_pages":5}}}'
         curl_info:
             url: 'https://244134adc586447f.api-us.cometchat.io/v3/conversations?unread=1&perPage=5&page=4'
             content_type: application/json
             http_code: 200
-            header_size: 786
+            header_size: 765
             request_size: 259
             filetime: -1
             ssl_verify_result: 0
             redirect_count: 0
-            total_time: 1.049323
-            namelookup_time: 0.001861
-            connect_time: 0.224885
-            pretransfer_time: 0.743524
+            total_time: 1.115902
+            namelookup_time: 0.002274
+            connect_time: 0.238637
+            pretransfer_time: 0.774469
             size_upload: 2.0
-            size_download: 4896.0
-            speed_download: 4665.0
+            size_download: 1466.0
+            speed_download: 1313.0
             speed_upload: 1.0
-            download_content_length: 4896.0
+            download_content_length: 1466.0
             upload_content_length: 2.0
-            starttransfer_time: 1.049262
+            starttransfer_time: 1.115878
             redirect_time: 0.0
             redirect_url: ''
-            primary_ip: 3.23.177.254
-            certinfo: { }
+            primary_ip: 3.140.14.70
+            certinfo: {  }
             primary_port: 443
             local_ip: 192.168.15.243
-            local_port: 51647
+            local_port: 64551
             http_version: 2
             protocol: 2
             ssl_verifyresult: 0
             scheme: HTTPS
-            appconnect_time_us: 743290
-            connect_time_us: 224885
-            namelookup_time_us: 1861
-            pretransfer_time_us: 743524
+            appconnect_time_us: 774350
+            connect_time_us: 238637
+            namelookup_time_us: 2274
+            pretransfer_time_us: 774469
             redirect_time_us: 0
-            starttransfer_time_us: 1049262
-            total_time_us: 1049323
+            starttransfer_time_us: 1115878
+            total_time_us: 1115902
     index: 0
--   request:
+-
+    request:
         method: GET
         url: 'https://244134adc586447f.api-us.cometchat.io/v3/conversations?unread=1&perPage=5&page=5'
         headers:
@@ -311,11 +316,11 @@
             code: 200
             message: OK
         headers:
-            Date: 'Wed, 06 Sep 2023 00:08:44 GMT'
+            Date: 'Fri, 15 Sep 2023 19:55:34 GMT'
             Content-Type: application/json
-            Content-Length: '3937'
+            Content-Length: '1760'
             Connection: close
-            Server: 'Apache/2.4.54 () OpenSSL/1.0.2k-fips'
+            Server: ''
             cache-control: 'must-revalidate, no-cache, private'
             Vary: Accept-Encoding
             Content-Encoding: none
@@ -325,46 +330,45 @@
             X-RateLimit-Remaining-For-App: '99995'
             Access-Control-Allow-Origin: '*'
             Access-Control-Allow-Methods: 'OPTIONS,HEAD,GET,POST,PUT,PATCH,DELETE'
-            Access-Control-Allow-Headers: 'Content-Type,Accept,Cache-Control,Authorization,X-Requested-With,appId,apiKey,authToken,onBehalfOf,resource,Accept-Encoding,group,region,sdk,guid,uid,clientEnvironment,extensionId,username,password,callToken'
+            Access-Control-Allow-Headers: 'Content-Type,Accept,Cache-Control,Authorization,X-Requested-With,appId,apiKey,authToken,onBehalfOf,resource,Accept-Encoding,group,region,sdk,guid,uid,clientEnvironment,extensionId,username,password,callToken,onBehalfOfUser'
             Accept: application/json
-            Upgrade: 'h2,h2c'
-        body: '{"data":[{"conversationId":"conversation_001_user_conversation_021","conversationType":"user","unreadMessageCount":"2","createdAt":1693899093,"updatedAt":1693899192,"uid":"conversation_021","lastMessage":{"id":"842","conversationId":"conversation_001_user_conversation_021","sender":"conversation_001","receiverType":"user","receiver":"conversation_021","category":"message","type":"text","data":{"text":"Hi Tom!","entities":{"sender":{"entity":{"uid":"conversation_001","name":"conversation_001","role":"default","status":"offline","createdAt":1693899021},"entityType":"user"},"receiver":{"entity":{"uid":"conversation_021","name":"conversation_021","role":"default","status":"offline","createdAt":1693899043,"conversationId":"conversation_001_user_conversation_021"},"entityType":"user"}}},"sentAt":1693899192,"updatedAt":1693899192},"conversationWith":{"uid":"conversation_001","name":"conversation_001","status":"offline","role":"default","createdAt":1693899021}},{"conversationId":"conversation_001_user_conversation_022","conversationType":"user","unreadMessageCount":"2","createdAt":1693899094,"updatedAt":1693899194,"uid":"conversation_022","lastMessage":{"id":"843","conversationId":"conversation_001_user_conversation_022","sender":"conversation_001","receiverType":"user","receiver":"conversation_022","category":"message","type":"text","data":{"text":"Hi Tom!","entities":{"sender":{"entity":{"uid":"conversation_001","name":"conversation_001","role":"default","status":"offline","createdAt":1693899021},"entityType":"user"},"receiver":{"entity":{"uid":"conversation_022","name":"conversation_022","role":"default","status":"offline","createdAt":1693899044,"conversationId":"conversation_001_user_conversation_022"},"entityType":"user"}}},"sentAt":1693899194,"updatedAt":1693899194},"conversationWith":{"uid":"conversation_001","name":"conversation_001","status":"offline","role":"default","createdAt":1693899021}},{"conversationId":"conversation_001_user_conversation_023","conversationType":"user","unreadMessageCount":"2","createdAt":1693899095,"updatedAt":1693899195,"uid":"conversation_023","lastMessage":{"id":"844","conversationId":"conversation_001_user_conversation_023","sender":"conversation_001","receiverType":"user","receiver":"conversation_023","category":"message","type":"text","data":{"text":"Hi Tom!","entities":{"sender":{"entity":{"uid":"conversation_001","name":"conversation_001","role":"default","status":"offline","createdAt":1693899021},"entityType":"user"},"receiver":{"entity":{"uid":"conversation_023","name":"conversation_023","role":"default","status":"offline","createdAt":1693899045,"conversationId":"conversation_001_user_conversation_023"},"entityType":"user"}}},"sentAt":1693899195,"updatedAt":1693899195},"conversationWith":{"uid":"conversation_001","name":"conversation_001","status":"offline","role":"default","createdAt":1693899021}},{"conversationId":"conversation_001_user_conversation_024","conversationType":"user","unreadMessageCount":"2","createdAt":1693899096,"updatedAt":1693899196,"uid":"conversation_024","lastMessage":{"id":"845","conversationId":"conversation_001_user_conversation_024","sender":"conversation_001","receiverType":"user","receiver":"conversation_024","category":"message","type":"text","data":{"text":"Hi Tom!","entities":{"sender":{"entity":{"uid":"conversation_001","name":"conversation_001","role":"default","status":"offline","createdAt":1693899021},"entityType":"user"},"receiver":{"entity":{"uid":"conversation_024","name":"conversation_024","role":"default","status":"offline","createdAt":1693899046,"conversationId":"conversation_001_user_conversation_024"},"entityType":"user"}}},"sentAt":1693899196,"updatedAt":1693899196},"conversationWith":{"uid":"conversation_001","name":"conversation_001","status":"offline","role":"default","createdAt":1693899021}}],"meta":{"pagination":{"total":24,"count":4,"per_page":5,"current_page":5,"total_pages":5}}}'
+        body: '{"data":[{"conversationId":"user_000_user_user_021","conversationType":"user","unreadMessageCount":"1","createdAt":1694807669,"updatedAt":1694807669,"uid":"user_021","conversationWith":{"uid":"user_000","name":"user_000","status":"offline","role":"default","createdAt":1694807456}},{"conversationId":"user_000_user_user_022","conversationType":"user","unreadMessageCount":"1","createdAt":1694807674,"updatedAt":1694807674,"uid":"user_022","conversationWith":{"uid":"user_000","name":"user_000","status":"offline","role":"default","createdAt":1694807456}},{"conversationId":"user_000_user_user_023","conversationType":"user","unreadMessageCount":"1","createdAt":1694807680,"updatedAt":1694807680,"uid":"user_023","conversationWith":{"uid":"user_000","name":"user_000","status":"offline","role":"default","createdAt":1694807456}},{"conversationId":"user_000_user_user_024","conversationType":"user","unreadMessageCount":"1","createdAt":1694807691,"updatedAt":1694807691,"uid":"user_024","lastMessage":{"id":"2094","conversationId":"user_000_user_user_024","sender":"user_000","receiverType":"user","receiver":"user_024","category":"message","type":"text","data":{"text":"Hi Tom!","entities":{"sender":{"entity":{"uid":"user_000","name":"user_000","role":"default","status":"offline","createdAt":1694807456},"entityType":"user"},"receiver":{"entity":{"uid":"user_024","name":"user_024","role":"default","status":"offline","createdAt":1694807485,"conversationId":"user_000_user_user_024"},"entityType":"user"}}},"sentAt":1694807691,"updatedAt":1694807691},"conversationWith":{"uid":"user_000","name":"user_000","status":"offline","role":"default","createdAt":1694807456}}],"meta":{"pagination":{"total":24,"count":4,"per_page":5,"current_page":5,"total_pages":5}}}'
         curl_info:
             url: 'https://244134adc586447f.api-us.cometchat.io/v3/conversations?unread=1&perPage=5&page=5'
             content_type: application/json
             http_code: 200
-            header_size: 786
+            header_size: 748
             request_size: 259
             filetime: -1
             ssl_verify_result: 0
             redirect_count: 0
-            total_time: 1.026618
-            namelookup_time: 0.00187
-            connect_time: 0.228235
-            pretransfer_time: 0.708515
+            total_time: 1.195072
+            namelookup_time: 0.004608
+            connect_time: 0.24486
+            pretransfer_time: 0.795369
             size_upload: 2.0
-            size_download: 3937.0
-            speed_download: 3834.0
+            size_download: 1760.0
+            speed_download: 1472.0
             speed_upload: 1.0
-            download_content_length: 3937.0
+            download_content_length: 1760.0
             upload_content_length: 2.0
-            starttransfer_time: 1.026593
+            starttransfer_time: 1.195022
             redirect_time: 0.0
             redirect_url: ''
-            primary_ip: 3.128.187.224
-            certinfo: { }
+            primary_ip: 3.140.14.70
+            certinfo: {  }
             primary_port: 443
             local_ip: 192.168.15.243
-            local_port: 51648
+            local_port: 64553
             http_version: 2
             protocol: 2
             ssl_verifyresult: 0
             scheme: HTTPS
-            appconnect_time_us: 708300
-            connect_time_us: 228235
-            namelookup_time_us: 1870
-            pretransfer_time_us: 708515
+            appconnect_time_us: 795227
+            connect_time_us: 244860
+            namelookup_time_us: 4608
+            pretransfer_time_us: 795369
             redirect_time_us: 0
-            starttransfer_time_us: 1026593
-            total_time_us: 1026618
+            starttransfer_time_us: 1195022
+            total_time_us: 1195072
     index: 0

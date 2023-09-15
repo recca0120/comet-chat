@@ -27,13 +27,51 @@ class MessageTest extends TestCase
     {
         VCR::insertCassette('send_message.yaml');
 
+//        $this->givenUsers(2);
+
         $result = $this->message->send(
-            receiver: 'uuid_999',
-            data: ['text' => 'Hi Tom!']
+            receiver: 'user_001',
+            data: ['text' => 'Hi Tom!'],
+            onBehalfOf: 'user_000'
         );
 
-        self::assertEquals('356', $result['id']);
-        self::assertEquals('uuid_999', $result['receiver']);
+        self::assertEquals([
+            'id' => '2144',
+            'conversationId' => 'user_000_user_user_001',
+            'sender' => 'user_000',
+            'receiverType' => 'user',
+            'receiver' => 'user_001',
+            'category' => 'message',
+            'type' => 'text',
+            'data' => [
+                'text' => 'Hi Tom!',
+                'entities' => [
+                    'sender' => [
+                        'entity' => [
+                            'uid' => 'user_000',
+                            'name' => 'user_000',
+                            'status' => 'offline',
+                            'role' => 'default',
+                            'createdAt' => 1694808268,
+                        ],
+                        'entityType' => 'user',
+                    ],
+                    'receiver' => [
+                        'entity' => [
+                            'uid' => 'user_001',
+                            'name' => 'user_001',
+                            'status' => 'offline',
+                            'role' => 'default',
+                            'createdAt' => 1694808269,
+                            'conversationId' => 'user_000_user_user_001',
+                        ],
+                        'entityType' => 'user',
+                    ],
+                ],
+            ],
+            'sentAt' => 1694808288,
+            'updatedAt' => 1694808288,
+        ], $result);
     }
 
     /**

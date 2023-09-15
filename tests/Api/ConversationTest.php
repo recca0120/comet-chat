@@ -27,8 +27,11 @@ class ConversationTest extends TestCase
     {
         VCR::insertCassette('list_conversation.yaml');
 
-//        $this->givenUsers(25);
-//        $this->givenMessages(24);
+//        $users = $this->givenUsers(25);
+//        $receiver = array_shift($users);
+//        foreach ($users as $sender) {
+//            $this->givenMessages(1, $receiver['uid'], $sender['uid']);
+//        }
 
         $pages = iterator_to_array($this->conversation->all(unread: true, perPage: 5));
         $records = array_reduce($pages, static fn($acc, $paginator) => [...$acc, ...$paginator->items()], []);
@@ -44,10 +47,13 @@ class ConversationTest extends TestCase
     {
         VCR::insertCassette('list_conversation_by_user.yaml');
 
-//        $this->givenUsers(25);
-//        $this->givenMessages(24);
+//        $users = $this->givenUsers(25);
+//        $receiver = array_shift($users);
+//        foreach ($users as $sender) {
+//            $this->givenMessages(1, $receiver['uid'], $sender['uid']);
+//        }
 
-        $pages = iterator_to_array($this->conversation->all(unread: true, perPage: 5, onBehalfOf: 'conversation_001'));
+        $pages = iterator_to_array($this->conversation->all(unread: true, perPage: 5, onBehalfOf: 'user_001'));
         $records = array_reduce($pages, static fn($acc, $paginator) => [...$acc, ...$paginator->items()], []);
 
         self::assertCount(1, $records);
