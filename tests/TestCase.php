@@ -26,7 +26,7 @@ abstract class TestCase extends BaseTestCase
 
         $config = require __DIR__.'/../config/cometchat.php';
 
-        $this->client = new Client($config['app_id'], $config['api_key'], $config['region'], new GuzzleClient());
+        $this->client = new Client($config, new GuzzleClient());
     }
 
     protected function tearDown(): void

@@ -23,9 +23,7 @@ class Client
     private StreamFactoryInterface $streamFactory;
 
     public function __construct(
-        private readonly string $appId,
-        private readonly string $apiKey,
-        private readonly string $region = 'us',
+        private readonly array $config,
         ?ClientInterface $client = null,
         ?RequestFactoryInterface $requestFactory = null,
         ?StreamFactoryInterface $streamFactory = null
@@ -72,7 +70,7 @@ class Client
 
         $request = $this->requestFactory->createRequest($method, $url)
             ->withHeader('accept', 'application/json')
-            ->withHeader('apikey', $this->apiKey)
+            ->withHeader('apikey', $this->config['api_key'])
             ->withHeader('content-type', 'application/json')
             ->withBody($this->streamFactory->createStream(json_encode(array_filter($data), JSON_THROW_ON_ERROR)));
 
@@ -94,7 +92,11 @@ class Client
 
     private function getUrl($path): string
     {
-        return sprintf("https://%s.api-%s.cometchat.io/v3/%s", $this->appId, $this->region, rtrim($path, '/'));
+        return sprintf("https://%s.api-%s.cometchat.io/v3/%s",
+            $this->config['app_id'],
+            $this->config['region'] ?? 'us',
+            rtrim($path, '/')
+        );
     }
 
     private static function hasHttpScheme(string $url): bool

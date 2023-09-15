@@ -2,7 +2,6 @@
 
 namespace Recca0120\CometChat;
 
-use GuzzleHttp\Client as GuzzleClient;
 use Illuminate\Support\ServiceProvider;
 use Recca0120\CometChat\Api\AuthToken;
 use Recca0120\CometChat\Api\BlockUser;
@@ -16,12 +15,7 @@ class CometChatServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__.'/../config/cometchat.php', 'cometchat');
 
-        $this->app->bind(Client::class, function () {
-            $config = config('cometchat');
-
-            return new Client($config['app_id'], $config['api_key'], $config['region'], new GuzzleClient());
-        });
-
+        $this->app->bind(Client::class, fn() => new Client(config('cometchat')));
         $this->app->bind(User::class, fn() => $this->app->make(Client::class)->user());
         $this->app->bind(AuthToken::class, fn() => $this->app->make(Client::class)->authToken());
         $this->app->bind(Message::class, fn() => $this->app->make(Client::class)->message());
