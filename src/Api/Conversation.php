@@ -47,4 +47,15 @@ class Conversation extends Base
             'onBehalfOf' => $onBehalfOf,
         ]);
     }
+
+    /**
+     * @throws ClientExceptionInterface
+     * @throws JsonException
+     */
+    public function updateUserConversation(string $uid, string $onBehalfOf, array $tags = []): array
+    {
+        return $this->sendRequest('PUT', 'users/'.$uid.'/conversation', [
+            'onBehalfOf' => $onBehalfOf,
+        ], ['tags' => $tags]);
+    }
 }
