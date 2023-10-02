@@ -6,6 +6,7 @@ use Http\Client\Exception\HttpException;
 use JsonException;
 use Psr\Http\Client\ClientExceptionInterface;
 use Recca0120\CometChat\Api\User;
+use Recca0120\CometChat\Exceptions\QuotaExhausted;
 use Recca0120\CometChat\Tests\TestCase;
 use VCR\VCR;
 
@@ -163,7 +164,7 @@ class UserTest extends TestCase
      */
     public function test_exhausted_quota(): void
     {
-        $this->expectException(HttpException::class);
+        $this->expectException(QuotaExhausted::class);
         $this->expectExceptionCode(402);
         $this->expectExceptionMessage('You\'ve exhausted the quota. The allowed limit of the feature Create User for your current plan free-2023-01 is 25. Please upgrade the plan to increase the limit.');
 

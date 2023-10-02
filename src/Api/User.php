@@ -3,8 +3,10 @@
 namespace Recca0120\CometChat\Api;
 
 use Generator;
+use Http\Client\Exception\HttpException;
 use JsonException;
 use Psr\Http\Client\ClientExceptionInterface;
+use Recca0120\CometChat\Exceptions\QuotaExhausted;
 
 class User extends Base
 {
@@ -33,16 +35,24 @@ class User extends Base
         ?array $tags = null,
         ?bool $withAuthToken = null
     ): array {
-        return $this->sendRequest('POST', 'users', [], [
-            'uid' => $uid,
-            'name' => $name,
-            'avatar' => $avatar,
-            'link' => $link,
-            'role' => $role,
-            'metadata' => $metadata,
-            'tags' => $tags,
-            'withAuthToken' => $withAuthToken,
-        ]);
+        try {
+            return $this->sendRequest('POST', 'users', [], [
+                'uid' => $uid,
+                'name' => $name,
+                'avatar' => $avatar,
+                'link' => $link,
+                'role' => $role,
+                'metadata' => $metadata,
+                'tags' => $tags,
+                'withAuthToken' => $withAuthToken,
+            ]);
+        } catch (HttpException $e) {
+            if ($e->getCode() !== 402) {
+                throw $e;
+            }
+
+            throw new QuotaExhausted($e->getMessage(), $e->getCode(), $e);
+        }
     }
 
     /**
