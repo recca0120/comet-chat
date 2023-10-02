@@ -156,4 +156,23 @@ class UserTest extends TestCase
             'createdAt' => 1694667958,
         ], last($records));
     }
+
+    /**
+     * @throws ClientExceptionInterface
+     * @throws JsonException
+     */
+    public function test_exhausted_quota(): void
+    {
+        $this->expectException(HttpException::class);
+        $this->expectExceptionCode(402);
+        $this->expectExceptionMessage('You\'ve exhausted the quota. The allowed limit of the feature Create User for your current plan free-2023-01 is 25. Please upgrade the plan to increase the limit.');
+
+        VCR::insertCassette('exhausted_quota.yaml');
+//        $this->givenUsers(26);
+
+        $avatar = 'https://via.placeholder.com/640x480.png/001122?text=accusamus';
+        $link = 'https://ankunding.com/commodi-debitis-sed-laboriosam-aliquid-voluptatum-enim-doloremque';
+
+        $this->user->create(uid: 'user_000', name: 'test', avatar: $avatar, link: $link, withAuthToken: true);
+    }
 }

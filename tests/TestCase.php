@@ -53,6 +53,7 @@ abstract class TestCase extends BaseTestCase
                 $result[] = $user->create(uid: $uid, name: $uid, withAuthToken: true);
                 usleep(100);
             } catch (\Exception $e) {
+                var_dump($e);
                 var_dump($e->getMessage());
                 exit;
             }

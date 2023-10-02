@@ -1,0 +1,76 @@
+
+-
+    request:
+        method: POST
+        url: 'https://244134adc586447f.api-us.cometchat.io/v3/users'
+        headers:
+            Host: 244134adc586447f.api-us.cometchat.io
+            Expect: ''
+            Accept-Encoding: ''
+            User-Agent: GuzzleHttp/7
+            accept: application/json
+            apikey: 4c3e5b5a96da90cc4bb3f3013d22e72aaea802c9
+            content-type: application/json
+        body: '{"uid":"user_000","name":"test","avatar":"https:\/\/via.placeholder.com\/640x480.png\/001122?text=accusamus","link":"https:\/\/ankunding.com\/commodi-debitis-sed-laboriosam-aliquid-voluptatum-enim-doloremque","withAuthToken":true}'
+    response:
+        status:
+            code: 402
+            message: 'Payment Required'
+        headers:
+            Date: 'Mon, 02 Oct 2023 07:54:27 GMT'
+            Content-Type: application/json
+            Content-Length: '418'
+            Connection: keep-alive
+            Server: ''
+            cache-control: 'must-revalidate, no-cache, private'
+            Vary: Accept-Encoding
+            Content-Encoding: none
+            X-RateLimit-Limit: '10000'
+            X-RateLimit-Remaining: '9998'
+            X-RateLimit-Limit-For-App: '100000'
+            X-RateLimit-Remaining-For-App: '99998'
+            Access-Control-Allow-Origin: '*'
+            Access-Control-Allow-Methods: 'OPTIONS,HEAD,GET,POST,PUT,PATCH,DELETE'
+            Access-Control-Allow-Headers: 'Content-Type,Accept,Cache-Control,Authorization,X-Requested-With,appId,apiKey,authToken,onBehalfOf,resource,Accept-Encoding,group,region,sdk,guid,uid,clientEnvironment,extensionId,username,password,callToken,onBehalfOfUser'
+            Accept: application/json
+            Upgrade: 'h2,h2c'
+        body: '{"error":{"message":"You''ve exhausted the quota. The allowed limit of the feature Create User for your current plan free-2023-01 is 25. Please upgrade the plan to increase the limit.","devMessage":"You''ve exhausted the quota. The allowed limit of the feature Create User for your current plan free-2023-01 is 25. Please upgrade the plan to increase the limit.","source":"chat-api","code":"ERR_PLAN_QUOTA_RESTRICTION"}}'
+        curl_info:
+            url: 'https://244134adc586447f.api-us.cometchat.io/v3/users'
+            content_type: application/json
+            http_code: 402
+            header_size: 782
+            request_size: 456
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 1.004599
+            namelookup_time: 0.003919
+            connect_time: 0.237074
+            pretransfer_time: 0.71436
+            size_upload: 230.0
+            size_download: 418.0
+            speed_download: 416.0
+            speed_upload: 228.0
+            download_content_length: 418.0
+            upload_content_length: 230.0
+            starttransfer_time: 1.004562
+            redirect_time: 0.0
+            redirect_url: ''
+            primary_ip: 18.189.67.72
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 192.168.15.243
+            local_port: 52199
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 714312
+            connect_time_us: 237074
+            namelookup_time_us: 3919
+            pretransfer_time_us: 714360
+            redirect_time_us: 0
+            starttransfer_time_us: 1004562
+            total_time_us: 1004599
+    index: 0
